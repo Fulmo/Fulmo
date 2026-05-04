@@ -4,7 +4,7 @@
 
 [![Telegram](https://img.shields.io/badge/Telegram-@vkusniypirogok-2CA5E0?style=flat&logo=telegram)](https://t.me/vkusniypirogok)
 [![GitHub](https://img.shields.io/badge/GitHub-Fulmo-181717?style=flat&logo=github)](https://github.com/Fulmo)
-[![Email](https://img.shields.io/badge/Email-sup3420@yandex.ru-D14836?style=flat&logo=gmail)](mailto:sup3420@yandex.ru)
+[![Email](https://img.shields.io/badge/Email-sup3420@yandex.ru-D14836?style=flat&logo=gmail)](mailto:i@mprotas.ru)
 [![Location](https://img.shields.io/badge/Location-Нижний%20Новгород-4285F4?style=flat&logo=google-maps)](https://maps.google.com/?q=Нижний+Новгород)
 [![Remote](https://img.shields.io/badge/Формат-Remote%20%2F%20Hybrid-34D399?style=flat)](/)
 
@@ -71,7 +71,7 @@ Nginx             ●●●●○  reverse proxy · load balancing · SSL
 ## 💼 Опыт работы
 
 ### 🔴 Транснефть-Технологии
-**Tech Lead** | Июнь 2025 — настоящее время | ~11 мес.  
+**Tech Lead** | Июнь 2025 — настоящее время | больше года
 *Нефть & Газ / Enterprise IT · Системная интеграция, автоматизация бизнес-процессов*
 
 - 👥 **Руководство командой** 6+ разработчиков: постановка задач, code review, менторинг, 1-on-1 встречи
@@ -156,7 +156,7 @@ Nginx             ●●●●○  reverse proxy · load balancing · SSL
 | | |
 |---|---|
 | **Телефон** | +7 (910) 791-30-18 |
-| **Email** | sup3420@yandex.ru |
+| **Email** | i@mprotas.ru |
 | **Telegram** | @vkusniypirogok |
 | **GitHub** | [github.com/Fulmo](https://github.com/Fulmo) |
 | **Локация** | Нижний Новгород, м. Горьковская |
