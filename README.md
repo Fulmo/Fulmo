@@ -10,11 +10,6 @@
 [![Location](https://img.shields.io/badge/Location-Нижний%20Новгород-4285F4?style=flat&logo=google-maps)](https://maps.google.com/?q=Нижний+Новгород)
 [![Remote](https://img.shields.io/badge/Формат-Remote%20%2F%20Hybrid-34D399?style=flat)](/)
 
-[![Скачать резюме PDF](https://img.shields.io/badge/📄%20Резюме-Скачать%20PDF-D14836?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)](https://github.com/Fulmo/Fulmo/raw/main/Protas_Maria_TechLead_2026.pdf)
-[![Резюме DOCX](https://img.shields.io/badge/Резюме-DOCX-2B579A?style=for-the-badge&logo=microsoftword&logoColor=white)](https://github.com/Fulmo/Fulmo/raw/main/Protas_Maria_TechLead_2026.docx)
-
-<sub>Также: <a href="https://github.com/Fulmo/Fulmo/raw/main/Protas_Maria_TechLead_2026.html">HTML</a> · <a href="https://github.com/Fulmo/Fulmo/blob/main/Protas_Maria_TechLead_2026.md">Markdown</a></sub>
-
 ---
 
 ## 📊 Статистика
@@ -72,6 +67,13 @@ Linux / Bash      ●●●●●  автоматизация · скрипты 
 Observability     ●●●●○  Grafana · Prometheus · ELK-стек
 ```
 
+### AI / ML
+
+```
+LLM / RAG         ●●●●○  OpenAI · Anthropic (Claude) API · RAG · function calling · LangChain
+PyTorch / TF      ●●●○○  PyTorch · TensorFlow · Keras · обучение и дообучение моделей
+```
+
 `Git` `pytest` `pre-commit` `Ruff` `MyPy` `Nginx` `Jira` `Confluence` `Notion` `Agile` `Scrum` `Code Review` `System Design`
 
 ---
@@ -88,8 +90,9 @@ Observability     ●●●●○  Grafana · Prometheus · ELK-стек
 - ⚙️ **CI/CD** (GitLab CI): рост покрытия тестами с 20% → **75%+**
 - 📈 **Оптимизация PostgreSQL**: снижение времени ответа критических API на **40%**
 - 🔧 Масштабирование Docker/Kubernetes, мониторинг Grafana + Prometheus
+- 🤖 **Интеграция LLM** (OpenAI / Anthropic Claude API, RAG, function calling) во внутренние сервисы
 
-`Python` `FastAPI` `Go` `React` `PostgreSQL` `Redis` `Docker` `K8s` `GitLab CI` `Nginx`
+`Python` `FastAPI` `Go` `React` `PostgreSQL` `Redis` `Docker` `K8s` `GitLab CI` `Nginx` `LLM`
 
 ### 🟣 YADRO — Senior FullStack Engineer
 
@@ -108,10 +111,11 @@ Observability     ●●●●○  Grafana · Prometheus · ELK-стек
 
 - 🔬 **Веб-инструменты** анализа производительности ПО и HW: Python (Django) + React.js + D3.js
 - 🤖 **ML-интеграция**: визуализация результатов AI-моделей (D3.js, Plotly)
+- 🧠 **Обучение и дообучение ML-моделей** (TensorFlow / Keras, PyTorch): подготовка датасетов, инференс
 - 🗃 Backend: REST API, PostgreSQL + MongoDB; Frontend: дашборды React + D3.js
 - 🧪 QA-автоматизация (pytest, unittest); мониторинг Grafana / Prometheus
 
-`Python` `Django` `React` `D3.js` `PostgreSQL` `MongoDB` `Docker` `Grafana`
+`Python` `Django` `React` `D3.js` `PostgreSQL` `MongoDB` `Docker` `Grafana` `TensorFlow` `PyTorch`
 
 ---
 
@@ -179,7 +183,7 @@ Observability     ●●●●○  Grafana · Prometheus · ELK-стек
 
 ## 🔎 Дополнительно
 
-**Изучаю сейчас:** Kubernetes (CKA), Apache Kafka, Rust, GraphQL federation, LLM API интеграции
+**Изучаю сейчас:** Kubernetes (CKA), Apache Kafka, Rust, GraphQL federation
 
 **Форматы работы:** Remote · Hybrid (Нижний Новгород) · командировки · проектная / частичная занятость
 
@@ -191,6 +195,7 @@ Observability     ●●●●○  Grafana · Prometheus · ELK-стек
 
 | | |
 |---|---|
+| **Телефон** | +7 (910) 791-30-18 |
 | **Email** | <i@mprotas.ru> |
 | **Telegram** | [@vkusniypirogok](https://t.me/vkusniypirogok) |
 | **GitHub** | [github.com/Fulmo](https://github.com/Fulmo) |
