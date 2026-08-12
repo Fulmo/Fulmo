@@ -2,7 +2,7 @@
 
 # Мария Протас
 
-## Lead Developer · Senior FullStack Developer · Python / Go / React / TypeScript
+## Lead Developer / Senior FullStack Developer (Python, Go) / ML
 
 [![Telegram](https://img.shields.io/badge/Telegram-@vkusniypirogok-2CA5E0?style=flat&logo=telegram)](https://t.me/vkusniypirogok)
 [![GitHub](https://img.shields.io/badge/GitHub-Fulmo-181717?style=flat&logo=github)](https://github.com/Fulmo)
@@ -30,7 +30,9 @@
 
 **Инженерная культура**: тесты как часть определения готовности (покрытие 20% → 75%+ на текущем проекте), обязательное code review, статическая проверка типов в CI.
 
-Открыта к позициям: **Lead Developer · Team Lead · Senior Backend (Python / Go) · Senior FullStack · Senior Frontend**
+**ML и глубокое обучение** — второе направление: в Intel и YADRO обучала и дообучала модели (TensorFlow / Keras, PyTorch, Scikit-learn), подбирала гиперпараметры, решала задачи регрессии и классификации — от подготовки датасета до инференса в проде.
+
+Открыта к позициям: **Lead Developer · Team Lead · Senior Backend (Python / Go) · Senior FullStack · ML Engineer**
 
 ---
 
@@ -39,7 +41,9 @@
 ### Backend
 
 ```
-Python (Senior)   ●●●●●  FastAPI · Django/DRF · asyncio · Celery · SQLAlchemy async · Pydantic 2
+Python (Senior)   ●●●●●  FastAPI · Django 4–6 / DRF 3.15+ · asyncio · Celery · SQLAlchemy async · Pydantic 2
+HTTP-клиенты      ●●●●●  httpx 0.28 (async, таймауты, ретраи, пулы) · requests · aiohttp
+Авторизация       ●●●●○  Keycloak 26 (OIDC / SSO) · OAuth2 · JWT · роли и права
 Go (Middle+)      ●●●●○  Gin · Echo · goroutines · channels · context · sync · gRPC · статические бинари
 gRPC / protobuf   ●●●●○  контракты между сервисами · streaming · генерация клиентов
 Микросервисы      ●●●●○  границы сервисов · API Gateway · идемпотентность · graceful degradation
@@ -98,7 +102,9 @@ Observability     ●●●●○  Grafana · Prometheus · ELK · структ�
 
 ```
 LLM / RAG         ●●●●○  OpenAI · Anthropic (Claude) API · RAG · function calling · LangChain
-PyTorch / TF      ●●●○○  PyTorch · TensorFlow · Keras · обучение и дообучение моделей
+Глубокое обучение ●●●●○  PyTorch · TensorFlow · Keras — CNN/RNN, обучение и дообучение моделей
+Классический ML   ●●●●○  Scikit-learn — регрессия, классификация, кросс-валидация, метрики
+Обучение моделей  ●●●●○  подготовка датасетов · подбор гиперпараметров · регуляризация · инференс в проде
 ```
 
 `Git` `Nginx` `Jira` `Confluence` `Agile` `Scrum` `System Design` `Code Review`
@@ -120,31 +126,36 @@ PyTorch / TF      ●●●○○  PyTorch · TensorFlow · Keras · обуче�
 - 📈 **Оптимизация PostgreSQL**: планы запросов, индексы — время ответа критических API **−40%**
 - 👥 **Руководство командой 9+ разработчиков**: декомпозиция задач, code review, менторинг, 1-on-1, найм
 - 🤖 **Интеграция LLM** (OpenAI / Anthropic Claude API, RAG, function calling) во внутренние сервисы
+- 🧠 **ML на данных платформы**: модели прогнозирования и классификации (PyTorch, Scikit-learn), подбор гиперпараметров, оценка качества и вывод в прод сервисом инференса
+- 🔗 **Интеграции и доступ**: httpx (async-клиенты, таймауты, ретраи, пулы соединений), единый вход через Keycloak 26 (OIDC/SSO, JWT, роли)
 
-`Python` `FastAPI` `Go` `gRPC` `Kafka` `RabbitMQ` `React` `TypeScript` `PostgreSQL` `Redis` `Docker` `K8s` `GitLab CI` `LLM`
+`Python` `FastAPI` `httpx` `Keycloak` `Go` `gRPC` `Kafka` `RabbitMQ` `React` `TypeScript` `PostgreSQL` `Redis` `Docker` `K8s` `GitLab CI` `LLM` `PyTorch` `Scikit-learn`
 
 ### 🟣 YADRO — Senior FullStack Developer
 
 **Февраль 2023 — Июнь 2025** · *Software / Hardware R&D*
 
-- 🌐 **Веб-платформа** мониторинга производительности HW/SW: Django/DRF + Vue 3 + TypeScript
-- 🔌 **REST API и WebSocket** для real-time метрик; сбор и агрегация телеметрии с оборудования
+- 🌐 **Веб-платформа** мониторинга производительности HW/SW: Django 4–5 / DRF + Vue 3 + TypeScript
+- 🔌 **REST API и WebSocket** для real-time метрик; сбор и агрегация телеметрии с оборудования на httpx (async, таймауты, ретраи)
+- 🧠 **ML на телеметрии**: обучение и дообучение моделей (PyTorch, TensorFlow / Keras, Scikit-learn), подбор гиперпараметров, задачи регрессии и классификации, оценка на отложенной выборке
+- 🔐 **Единый вход** и разграничение прав через Keycloak (OIDC/SSO)
 - 🐹 **Утилиты сбора метрик на Go** — там, где нужен один статический бинарь без рантайма на целевой машине
 - 🧩 **Компонентная библиотека** Vue 3 (Composition API, Pinia), OpenAPI/Swagger
 - ✅ **Тестирование**: pytest на бэкенде, Jest на фронтенде; code review, Scrum
 
-`Python` `Django` `DRF` `Go` `Vue 3` `TypeScript` `PostgreSQL` `MongoDB` `Docker` `pytest` `Jest`
+`Python` `Django 4–5` `DRF` `httpx` `Keycloak` `Go` `Vue 3` `TypeScript` `PostgreSQL` `MongoDB` `Docker` `pytest` `Jest` `PyTorch` `TensorFlow` `Scikit-learn`
 
 ### 🟢 Intel Corporation — AI Systems Engineer / FullStack Developer
 
 **Февраль 2018 — Февраль 2022** · *Semiconductor / AI & ML*
 
-- 🔬 **Веб-инструменты** анализа производительности ПО и HW: Python (Django) + React + D3.js
+- 🧠 **Глубокое обучение и ML**: обучение и дообучение моделей на TensorFlow / Keras и PyTorch, классические алгоритмы на Scikit-learn
+- 🎛 **Полный цикл модели**: подготовка и разметка датасетов, выбор архитектуры, подбор гиперпараметров, регуляризация, метрики регрессии и классификации, инференс в проде
+- 🔬 **Веб-инструменты** анализа производительности ПО и HW: Python (Django 2–4) + React + D3.js
 - 🗃 **Backend**: REST API, PostgreSQL + MongoDB; дашборды на больших выборках
-- 🧠 **Обучение и дообучение ML-моделей** (TensorFlow / Keras, PyTorch): подготовка датасетов, инференс, визуализация
 - 🧪 **QA-автоматизация** (pytest, unittest); мониторинг Grafana / Prometheus
 
-`Python` `Django` `React` `TypeScript` `D3.js` `PostgreSQL` `MongoDB` `Docker` `Grafana` `TensorFlow` `PyTorch`
+`Python` `Django 2–4` `React` `TypeScript` `D3.js` `PostgreSQL` `MongoDB` `Docker` `Grafana` `TensorFlow` `Keras` `PyTorch` `Scikit-learn` `Deep Learning`
 
 ---
 
