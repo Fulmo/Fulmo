@@ -41,7 +41,7 @@
 ### Backend
 
 ```
-Python (Senior)   ●●●●●  FastAPI · Django 4–6 / DRF 3.15+ · asyncio · Celery · SQLAlchemy async · Pydantic 2
+Python (Senior)   ●●●●●  FastAPI 0.115+ · Django 4.2–6.1 / DRF 3.15+ · asyncio · Celery · SQLAlchemy async · Pydantic 2
 HTTP-клиенты      ●●●●●  httpx 0.28 (async, таймауты, ретраи, пулы) · requests · aiohttp
 Авторизация       ●●●●○  Keycloak 26 (OIDC / SSO) · OAuth2 · JWT · роли и права
 Go (Middle+)      ●●●●○  Gin · Echo · goroutines · channels · context · sync · gRPC · статические бинари
@@ -98,6 +98,15 @@ Linux / Bash      ●●●●●  автоматизация · скрипты 
 Observability     ●●●●○  Grafana · Prometheus · ELK · структурные логи
 ```
 
+### SRE / DevOps
+
+```
+Kubernetes       ●●●●○  1.30+ · Helm · выкаты, ресурсные лимиты, health-пробы
+CI/CD            ●●●●○  GitLab CI · GitHub Actions · quality gate, автотесты на каждый мерж
+Наблюдаемость    ●●●●○  Grafana · Prometheus — дашборды, алерты, метрики сервисов
+SRE-практики     ●●●●○  SLA/SLO · дежурства по графику · разбор инцидентов и постмортемы
+```
+
 ### AI / ML
 
 ```
@@ -105,6 +114,7 @@ LLM / RAG         ●●●●○  OpenAI · Anthropic (Claude) API · RAG · fu
 Глубокое обучение ●●●●○  PyTorch · TensorFlow · Keras — CNN/RNN, обучение и дообучение моделей
 Классический ML   ●●●●○  Scikit-learn — регрессия, классификация, кросс-валидация, метрики
 Обучение моделей  ●●●●○  подготовка датасетов · подбор гиперпараметров · регуляризация · инференс в проде
+MLOps             ●●●○○  версионирование моделей · регулярный ретрейн · выкат весов · контроль качества после релиза
 ```
 
 `Git` `Nginx` `Jira` `Confluence` `Agile` `Scrum` `System Design` `Code Review`
@@ -118,15 +128,16 @@ LLM / RAG         ●●●●○  OpenAI · Anthropic (Claude) API · RAG · fu
 **Июнь 2025 — настоящее время** · *Нефть & Газ / Enterprise IT*
 
 - 🏗 **Системный дизайн платформы**: декомпозиция монолита на микросервисы, границы сервисов и контракты, выбор синхронного (gRPC) и асинхронного (очереди) взаимодействия
-- 🐍 **Backend на Python**: FastAPI + asyncio, SQLAlchemy async, Celery — основные бизнес-сервисы
-- 🐹 **Backend на Go**: сервисы интеграций и фоновой обработки на Gin, где важны latency и параллелизм — goroutines, channels, context с отменой; статические бинари без рантайма
+- 🐍 **Backend на Python 3.12–3.14**: FastAPI 0.115+ и asyncio, SQLAlchemy async, Celery — основные бизнес-сервисы
+- 🐹 **Backend на Go 1.22–1.24**: сервисы интеграций и фоновой обработки на Gin, где важны latency и параллелизм — goroutines, channels, context с отменой; статические бинари без рантайма
 - 🚀 **FullStack**: React SPA на TypeScript поверх собственных API — формы, таблицы с серверной пагинацией, разграничение прав
 - 🔄 **Асинхронное взаимодействие**: Kafka и RabbitMQ между сервисами, идемпотентность обработчиков, DLQ и повторы
 - ✅ **Качество как процесс**: pytest + интеграционные тесты на testcontainers, quality gate в CI, обязательное ревью — покрытие **20% → 75%+**
 - 📈 **Оптимизация PostgreSQL**: планы запросов, индексы — время ответа критических API **−40%**
 - 👥 **Руководство командой 9+ разработчиков**: декомпозиция задач, code review, менторинг, 1-on-1, найм
 - 🤖 **Интеграция LLM** (OpenAI / Anthropic Claude API, RAG, function calling) во внутренние сервисы
-- 🧠 **ML на данных платформы**: модели прогнозирования и классификации (PyTorch, Scikit-learn), подбор гиперпараметров, оценка качества и вывод в прод сервисом инференса
+- 🧠 **ML и MLOps на данных платформы**: модели прогнозирования и классификации (PyTorch 2.x, Scikit-learn 1.5+), подбор гиперпараметров, версионирование и вывод моделей в прод сервисом инференса, контроль качества после выката
+- 🛡 **SRE-часть работы**: SLA/SLO на критичные сервисы, алерты в Grafana/Prometheus, разбор инцидентов и постмортемы, дежурства по графику; Kubernetes 1.30+, GitLab CI
 - 🔗 **Интеграции и доступ**: httpx (async-клиенты, таймауты, ретраи, пулы соединений), единый вход через Keycloak 26 (OIDC/SSO, JWT, роли)
 
 `Python` `FastAPI` `httpx` `Keycloak` `Go` `gRPC` `Kafka` `RabbitMQ` `React` `TypeScript` `PostgreSQL` `Redis` `Docker` `K8s` `GitLab CI` `LLM` `PyTorch` `Scikit-learn`
@@ -135,11 +146,12 @@ LLM / RAG         ●●●●○  OpenAI · Anthropic (Claude) API · RAG · fu
 
 **Февраль 2023 — Июнь 2025** · *Software / Hardware R&D*
 
-- 🌐 **Веб-платформа** мониторинга производительности HW/SW: Django 4–5 / DRF + Vue 3 + TypeScript
+- 🌐 **Веб-платформа** мониторинга производительности HW/SW: Django 4.2–5.1 / DRF 3.14+ + Vue 3 + TypeScript 5
 - 🔌 **REST API и WebSocket** для real-time метрик; сбор и агрегация телеметрии с оборудования на httpx (async, таймауты, ретраи)
-- 🧠 **ML на телеметрии**: обучение и дообучение моделей (PyTorch, TensorFlow / Keras, Scikit-learn), подбор гиперпараметров, задачи регрессии и классификации, оценка на отложенной выборке
+- 🧠 **ML на телеметрии**: обучение и дообучение моделей (PyTorch 2.0–2.5, TensorFlow / Keras 2.12+, Scikit-learn 1.3+), подбор гиперпараметров, задачи регрессии и классификации, оценка на отложенной выборке
+- 🛠 **Эксплуатация платформы**: сборки и выкаты через GitLab CI, дашборды и алерты в Grafana / Prometheus, дежурства и разбор инцидентов
 - 🔐 **Единый вход** и разграничение прав через Keycloak (OIDC/SSO)
-- 🐹 **Утилиты сбора метрик на Go** — там, где нужен один статический бинарь без рантайма на целевой машине
+- 🐹 **Утилиты сбора метрик на Go 1.20–1.23** — там, где нужен один статический бинарь без рантайма на целевой машине
 - 🧩 **Компонентная библиотека** Vue 3 (Composition API, Pinia), OpenAPI/Swagger
 - ✅ **Тестирование**: pytest на бэкенде, Jest на фронтенде; code review, Scrum
 
@@ -149,10 +161,11 @@ LLM / RAG         ●●●●○  OpenAI · Anthropic (Claude) API · RAG · fu
 
 **Февраль 2018 — Февраль 2022** · *Semiconductor / AI & ML*
 
-- 🧠 **Глубокое обучение и ML**: обучение и дообучение моделей на TensorFlow / Keras и PyTorch, классические алгоритмы на Scikit-learn
+- 🧠 **Глубокое обучение и ML**: обучение и дообучение моделей на TensorFlow 1.15–2.8 / Keras и PyTorch 1.x, классические алгоритмы на Scikit-learn 0.20–1.0
 - 🎛 **Полный цикл модели**: подготовка и разметка датасетов, выбор архитектуры, подбор гиперпараметров, регуляризация, метрики регрессии и классификации, инференс в проде
-- 🔬 **Веб-инструменты** анализа производительности ПО и HW: Python (Django 2–4) + React + D3.js
-- 🗃 **Backend**: REST API, PostgreSQL + MongoDB; дашборды на больших выборках
+- 🔬 **Веб-инструменты** анализа производительности ПО и HW: Python 3.6–3.9 (Django 2.0–4.0) + React 16 + D3.js
+- 🗃 **Backend**: REST API, PostgreSQL 9.6–13 + MongoDB 4.x; дашборды на больших выборках
+- ♻️ **Пайплайны обучения и переобучения**: подготовка данных, регулярный ретрейн, выкат весов в сервисы — MLOps до того, как это так назвали
 - 🧪 **QA-автоматизация** (pytest, unittest); мониторинг Grafana / Prometheus
 
 `Python` `Django 2–4` `React` `TypeScript` `D3.js` `PostgreSQL` `MongoDB` `Docker` `Grafana` `TensorFlow` `Keras` `PyTorch` `Scikit-learn` `Deep Learning`
