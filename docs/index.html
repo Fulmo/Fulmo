@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мария Протас — Lead Developer / Senior FullStack Developer (Python, Go) / ML</title>
+<meta name="description" content="Backend Python / Go, FullStack, ML · 7+ лет · удалёнка или гибрид">
+<meta property="og:title" content="Мария Протас — Lead Developer / Senior FullStack Developer (Python, Go) / ML">
+<meta property="og:description" content="Backend Python / Go, FullStack, ML · 7+ лет · удалёнка или гибрид">
+<meta property="og:type" content="profile">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23a8481c'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='30' font-weight='600' fill='%23fff' text-anchor='middle'%3EMP%3C/text%3E%3C/svg%3E">
+<style>
+:root {
+  color-scheme: light dark;
+  --bg: #fbfaf8;
+  --surface: #ffffff;
+  --text: #1d1c1a;
+  --muted: #6a6660;
+  --line: #e3ded6;
+  --accent: #a8481c;
+  --accent-soft: #f3e4da;
+  --code-bg: #f5f2ed;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14151a;
+    --surface: #1b1d23;
+    --text: #e9e6e1;
+    --muted: #9b968e;
+    --line: #2c2f37;
+    --accent: #e8915b;
+    --accent-soft: #33261e;
+    --code-bg: #1f2229;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+.topbar {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .7rem clamp(1rem, 4vw, 3rem);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.brand { font-weight: 600; letter-spacing: .01em; }
+.brand span { color: var(--muted); font-weight: 400; }
+.switch { display: flex; gap: .2rem; padding: .2rem; background: var(--code-bg); border-radius: 999px; }
+.switch button {
+  border: 0; cursor: pointer; font: inherit; font-size: .9rem; font-weight: 600;
+  padding: .35rem .95rem; border-radius: 999px; color: var(--muted); background: transparent;
+}
+.switch button[aria-pressed="true"] { background: var(--surface); color: var(--accent); box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+.switch button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+main { max-width: 62rem; margin: 0 auto; padding: 0 clamp(1rem, 4vw, 3rem) 4rem; }
+.page[hidden] { display: none; }
+.hero { padding: clamp(2rem, 6vw, 3.5rem) 0 1.5rem; border-bottom: 1px solid var(--line); }
+.hero h1 {
+  margin: 0; font-size: clamp(2rem, 6vw, 3rem); line-height: 1.1; letter-spacing: -.02em;
+  font-family: "Iowan Old Style", Georgia, "Times New Roman", serif; font-weight: 600;
+}
+.headline { margin: .6rem 0 0; font-size: clamp(1rem, 2.6vw, 1.2rem); color: var(--accent); font-weight: 600; }
+.tagline { margin: .5rem 0 0; color: var(--muted); }
+.contacts { list-style: none; display: flex; flex-wrap: wrap; gap: .4rem 1.5rem; margin: 1.2rem 0 0; padding: 0; font-size: .95rem; }
+.contacts .k { color: var(--muted); margin-right: .4rem; }
+.downloads { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.4rem; }
+.dl {
+  display: inline-block; padding: .5rem 1rem; border-radius: var(--radius);
+  border: 1px solid var(--line); background: var(--surface); color: var(--text);
+  text-decoration: none; font-size: .9rem; font-weight: 600;
+}
+.dl:hover { border-color: var(--accent); color: var(--accent); }
+.sections {
+  display: flex; gap: 1rem; overflow-x: auto; padding: .9rem 0; margin-bottom: 1rem;
+  border-bottom: 1px solid var(--line); font-size: .875rem; scrollbar-width: none;
+}
+.sections::-webkit-scrollbar { display: none; }
+.sections a { color: var(--muted); text-decoration: none; white-space: nowrap; }
+.sections a:hover { color: var(--accent); }
+.resume h2 {
+  margin: 2.6rem 0 1rem; padding-top: 1.4rem; border-top: 1px solid var(--line);
+  font-family: "Iowan Old Style", Georgia, serif; font-size: 1.5rem; letter-spacing: -.01em;
+}
+.resume h3 { margin: 2rem 0 .3rem; font-size: 1.15rem; }
+.resume h3 + p { margin-top: 0; color: var(--muted); font-size: .95rem; }
+.resume ul { padding-left: 1.2rem; }
+.resume li { margin: .35rem 0; }
+.resume a { color: var(--accent); text-underline-offset: 2px; }
+.resume img { max-width: 100%; height: auto; border-radius: var(--radius); }
+.resume table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .95rem; display: block; overflow-x: auto; }
+.resume th, .resume td { border: 1px solid var(--line); padding: .5rem .7rem; text-align: left; }
+.resume th { background: var(--code-bg); }
+.resume pre {
+  background: var(--code-bg); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 1rem; overflow-x: auto; font-size: .85rem; line-height: 1.5;
+}
+.resume :not(pre) > code {
+  background: var(--accent-soft); color: var(--accent); padding: .12em .4em;
+  border-radius: 5px; font-size: .85em;
+}
+/* Горизонтальные линии из markdown на сайте не нужны: разделы уже отбиты линией
+   у h2, иначе перед каждым заголовком печатается двойная черта. */
+.resume hr { display: none; }
+.resume > h2:first-child { margin-top: .8rem; padding-top: 0; border-top: 0; }
+footer { max-width: 62rem; margin: 0 auto; padding: 2rem clamp(1rem, 4vw, 3rem) 3rem; color: var(--muted); font-size: .85rem; }
+@media (max-width: 640px) {
+  .resume pre { font-size: .72rem; }
+  .contacts { gap: .3rem 1rem; }
+}
+@media print {
+  .topbar, .sections, .downloads, footer { display: none; }
+  body { background: #fff; color: #000; font-size: 10.5pt; }
+  .resume pre { background: #f6f6f6; }
+  .resume h2 { page-break-after: avoid; }
+  .resume li, .resume h3 { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand"><span class="brand-name">Мария Протас</span> <span>· CV</span></div>
+  <div class="switch" role="group" aria-label="Language / Язык">
+<button type="button" data-lang="ru" aria-pressed="false">RU</button>
+<button type="button" data-lang="en" aria-pressed="false">EN</button>
+  </div>
+</div>
+<main>
+<section class="page" data-lang="ru" lang="ru">
+  <header class="hero">
+    <div class="hero-main">
+      <h1>Мария Протас</h1>
+      <p class="headline">Lead Developer / Senior FullStack Developer (Python, Go) / ML</p>
+      <p class="tagline">Backend Python / Go, FullStack, ML · 7+ лет · удалёнка или гибрид</p>
+      <ul class="contacts">
+<li><span class="k">Почта</span><a href="mailto:i@mprotas.ru">i@mprotas.ru</a></li>
+<li><span class="k">Telegram</span><a href="https://t.me/vkusniypirogok">@vkusniypirogok</a></li>
+<li><span class="k">GitHub</span><a href="https://github.com/Fulmo">github.com/Fulmo</a></li>
+<li><span class="k">Телефон</span><a href="tel:+7(910)791-30-18">+7 (910) 791-30-18</a></li>
+<li><span class="k">Локация</span>Нижний Новгород</li>
+      </ul>
+      <div class="downloads"><a class="dl" href="Protas_Maria_LeadDeveloper_2026.pdf" download>Скачать PDF</a>
+<a class="dl" href="Protas_Maria_LeadDeveloper_2026.docx" download>Скачать DOCX</a></div>
+    </div>
+  </header>
+  <nav class="sections" aria-label="Разделы"><a href="#-статистика">Статистика</a>
+<a href="#-профессиональный-профиль">Профессиональный профиль</a>
+<a href="#-технический-стек">Технический стек</a>
+<a href="#-опыт-работы">Опыт работы</a>
+<a href="#-собственные-проекты">Собственные проекты</a>
+<a href="#-образование">Образование</a>
+<a href="#-контакты">Контакты</a></nav>
+  <article class="resume">
+<h2 id="-статистика">📊 Статистика</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">🏆 Опыт</th>
+<th style="text-align:center">🏢 Компании</th>
+<th style="text-align:center">👥 Команда</th>
+<th style="text-align:center">💎 Уровень</th>
+<th style="text-align:center">💰 Ожидания</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>7+ лет</strong></td>
+<td style="text-align:center">Intel · YADRO · Транснефть</td>
+<td style="text-align:center"><strong>9+ человек</strong></td>
+<td style="text-align:center"><strong>Senior / Lead</strong></td>
+<td style="text-align:center"><strong>400 000 ₽/мес</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-профессиональный-профиль">👩‍💻 Профессиональный профиль</h2>
+<p><strong>Разработчик</strong> с 7+ годами коммерческого опыта, ведущий команду. Пишу код каждый день — лидерство не заменило инженерную работу, а добавилось к ней.</p>
+<p><strong>Backend</strong> — основная специализация: Python (Senior) и Go (Middle+). Микросервисы, gRPC-контракты, асинхронное взаимодействие через Kafka и RabbitMQ, оптимизация PostgreSQL под нагрузкой. Проектирую системы целиком: границы сервисов, схема данных, отказоустойчивость, деплой, мониторинг.</p>
+<p><strong>FullStack</strong> — React и TypeScript в проде: SPA поверх собственных API, Next.js для SSR, Vue 3 там, где так сложилось исторически.</p>
+<p><strong>Инженерная культура</strong>: тесты как часть определения готовности (покрытие 20% → 75%+ на текущем проекте), обязательное code review, статическая проверка типов в CI.</p>
+<p><strong>ML и глубокое обучение</strong> — второе направление: в Intel и YADRO обучала и дообучала модели (TensorFlow / Keras, PyTorch, Scikit-learn), подбирала гиперпараметры, решала задачи регрессии и классификации — от подготовки датасета до инференса в проде.</p>
+<p>Открыта к позициям: <strong>Lead Developer · Team Lead · Senior Backend (Python / Go) · Senior FullStack · ML Engineer</strong></p>
+<hr />
+<h2 id="-технический-стек">🛠 Технический стек</h2>
+<h3 id="backend">Backend</h3>
+<pre><code>Python (Senior)   ●●●●●  FastAPI 0.115+ · Django 4.2–6.1 / DRF 3.15+ · asyncio · Celery · SQLAlchemy async · Pydantic 2
+HTTP-клиенты      ●●●●●  httpx 0.28 (async, таймауты, ретраи, пулы) · requests · aiohttp
+Авторизация       ●●●●○  Keycloak 26 (OIDC / SSO) · OAuth2 · JWT · роли и права
+Go (Middle+)      ●●●●○  Gin · Echo · goroutines · channels · context · sync · gRPC · статические бинари
+gRPC / protobuf   ●●●●○  контракты между сервисами · streaming · генерация клиентов
+Микросервисы      ●●●●○  границы сервисов · API Gateway · идемпотентность · graceful degradation
+Очереди           ●●●○○  Kafka (топики, партиции, consumer groups) · RabbitMQ (exchange, DLQ, retry)
+REST API          ●●●●○  OpenAPI · Swagger · WebSocket · версионирование
+Node.js           ●●●○○  Express · Nest.js — сервисы и BFF под фронтенд
+Rust              ●●○○○  пет-проекты и CLI-утилиты (~2 года): ownership, tokio, serde, cargo
+</code></pre>
+<h3 id="frontend">Frontend</h3>
+<pre><code>React             ●●●●○  React 18+ · hooks · контекст · Redux/Zustand · React Query
+TypeScript        ●●●●○  strict · дженерики · типизация API-контрактов · ES2022+
+Next.js           ●●●●○  SSR/SSG · App Router · оптимизация загрузки
+Vue.js / Nuxt     ●●●●○  Vue 3 · Composition API · Pinia · Nuxt 3
+HTML5 / CSS3      ●●●●●  Tailwind CSS · адаптивная вёрстка · доступность
+React Native      ●●○○○  Expo · мобильные экраны поверх общего API (пет-проекты)
+</code></pre>
+<h3 id="базы-данных">Базы данных</h3>
+<pre><code>PostgreSQL        ●●●●●  планы запросов · индексы · партиционирование · транзакции и блокировки
+MongoDB           ●●●●○  motor (async) · агрегации · схемы и индексы
+Redis             ●●●●○  кэш · pub/sub · очереди задач · распределённые блокировки
+</code></pre>
+<h3 id="системный-дизайн">Системный дизайн</h3>
+<pre><code>Проектирование    ●●●●○  декомпозиция монолита · выбор синхрон/асинхрон · схема данных
+Надёжность        ●●●●○  таймауты · ретраи с backoff · circuit breaker · идемпотентность
+Нагрузка          ●●●○○  кэширование · пулы соединений · профилирование узких мест
+</code></pre>
+<h3 id="qa-и-качество-кода">QA и качество кода</h3>
+<pre><code>pytest            ●●●●●  юнит · параметризация · фикстуры · моки · покрытие
+Интеграционные    ●●●●○  testcontainers · тестовая БД · контрактные тесты API
+UI-автотесты      ●●●●○  Playwright · Jest / Vitest
+Процесс           ●●●●●  code review · quality gate в CI · Ruff · MyPy · basedpyright (strict) · pre-commit
+</code></pre>
+<h3 id="devops-и-инфраструктура">DevOps и инфраструктура</h3>
+<pre><code>Docker / K8s      ●●●●○  многостадийные сборки · Docker Compose · Helm · Kubernetes
+CI/CD             ●●●●○  GitLab CI · GitHub Actions · автотесты и линтеры на каждый PR
+Linux / Bash      ●●●●●  автоматизация · скрипты · администрирование серверов
+Observability     ●●●●○  Grafana · Prometheus · ELK · структурные логи
+</code></pre>
+<h3 id="sre--devops">SRE / DevOps</h3>
+<pre><code>Kubernetes       ●●●●○  1.30+ · Helm · выкаты, ресурсные лимиты, health-пробы
+CI/CD            ●●●●○  GitLab CI · GitHub Actions · quality gate, автотесты на каждый мерж
+Наблюдаемость    ●●●●○  Grafana · Prometheus — дашборды, алерты, метрики сервисов
+SRE-практики     ●●●●○  SLA/SLO · дежурства по графику · разбор инцидентов и постмортемы
+</code></pre>
+<h3 id="ai--ml">AI / ML</h3>
+<pre><code>LLM / RAG         ●●●●○  OpenAI · Anthropic (Claude) API · RAG · function calling · LangChain
+Глубокое обучение ●●●●○  PyTorch · TensorFlow · Keras — CNN/RNN, обучение и дообучение моделей
+Классический ML   ●●●●○  Scikit-learn — регрессия, классификация, кросс-валидация, метрики
+Обучение моделей  ●●●●○  подготовка датасетов · подбор гиперпараметров · регуляризация · инференс в проде
+MLOps             ●●●○○  версионирование моделей · регулярный ретрейн · выкат весов · контроль качества после релиза
+</code></pre>
+<p><code>Git</code> <code>Nginx</code> <code>Jira</code> <code>Confluence</code> <code>Agile</code> <code>Scrum</code> <code>System Design</code> <code>Code Review</code></p>
+<hr />
+<h2 id="-опыт-работы">💼 Опыт работы</h2>
+<h3 id="-транснефть-технологии--tech-lead--lead-fullstack-developer">🔴 Транснефть-Технологии — Tech Lead / Lead Fullstack Developer</h3>
+<p><strong>Июнь 2025 — настоящее время</strong> · <em>Нефть &amp; Газ / Enterprise IT</em></p>
+<ul>
+<li>🏗 <strong>Системный дизайн платформы</strong>: декомпозиция монолита на микросервисы, границы сервисов и контракты, выбор синхронного (gRPC) и асинхронного (очереди) взаимодействия</li>
+<li>🐍 <strong>Backend на Python 3.12–3.14</strong>: FastAPI 0.115+ и asyncio, SQLAlchemy async, Celery — основные бизнес-сервисы</li>
+<li>🐹 <strong>Backend на Go 1.22–1.24</strong>: сервисы интеграций и фоновой обработки на Gin, где важны latency и параллелизм — goroutines, channels, context с отменой; статические бинари без рантайма</li>
+<li>🚀 <strong>FullStack</strong>: React SPA на TypeScript поверх собственных API — формы, таблицы с серверной пагинацией, разграничение прав</li>
+<li>🔄 <strong>Асинхронное взаимодействие</strong>: Kafka и RabbitMQ между сервисами, идемпотентность обработчиков, DLQ и повторы</li>
+<li>✅ <strong>Качество как процесс</strong>: pytest + интеграционные тесты на testcontainers, quality gate в CI, обязательное ревью — покрытие <strong>20% → 75%+</strong></li>
+<li>📈 <strong>Оптимизация PostgreSQL</strong>: планы запросов, индексы — время ответа критических API <strong>−40%</strong></li>
+<li>👥 <strong>Руководство командой 9+ разработчиков</strong>: декомпозиция задач, code review, менторинг, 1-on-1, найм</li>
+<li>🤖 <strong>Интеграция LLM</strong> (OpenAI / Anthropic Claude API, RAG, function calling) во внутренние сервисы</li>
+<li>🧠 <strong>ML и MLOps на данных платформы</strong>: модели прогнозирования и классификации (PyTorch 2.x, Scikit-learn 1.5+), подбор гиперпараметров, версионирование и вывод моделей в прод сервисом инференса, контроль качества после выката</li>
+<li>🛡 <strong>SRE-часть работы</strong>: SLA/SLO на критичные сервисы, алерты в Grafana/Prometheus, разбор инцидентов и постмортемы, дежурства по графику; Kubernetes 1.30+, GitLab CI</li>
+<li>🔗 <strong>Интеграции и доступ</strong>: httpx (async-клиенты, таймауты, ретраи, пулы соединений), единый вход через Keycloak 26 (OIDC/SSO, JWT, роли)</li>
+</ul>
+<p><code>Python</code> <code>FastAPI</code> <code>httpx</code> <code>Keycloak</code> <code>Go</code> <code>gRPC</code> <code>Kafka</code> <code>RabbitMQ</code> <code>React</code> <code>TypeScript</code> <code>PostgreSQL</code> <code>Redis</code> <code>Docker</code> <code>K8s</code> <code>GitLab CI</code> <code>LLM</code> <code>PyTorch</code> <code>Scikit-learn</code></p>
+<h3 id="-yadro--senior-fullstack-developer">🟣 YADRO — Senior FullStack Developer</h3>
+<p><strong>Февраль 2023 — Июнь 2025</strong> · <em>Software / Hardware R&amp;D</em></p>
+<ul>
+<li>🌐 <strong>Веб-платформа</strong> мониторинга производительности HW/SW: Django 4.2–5.1 / DRF 3.14+ + Vue 3 + TypeScript 5</li>
+<li>🔌 <strong>REST API и WebSocket</strong> для real-time метрик; сбор и агрегация телеметрии с оборудования на httpx (async, таймауты, ретраи)</li>
+<li>🧠 <strong>ML на телеметрии</strong>: обучение и дообучение моделей (PyTorch 2.0–2.5, TensorFlow / Keras 2.12+, Scikit-learn 1.3+), подбор гиперпараметров, задачи регрессии и классификации, оценка на отложенной выборке</li>
+<li>🛠 <strong>Эксплуатация платформы</strong>: сборки и выкаты через GitLab CI, дашборды и алерты в Grafana / Prometheus, дежурства и разбор инцидентов</li>
+<li>🔐 <strong>Единый вход</strong> и разграничение прав через Keycloak (OIDC/SSO)</li>
+<li>🐹 <strong>Утилиты сбора метрик на Go 1.20–1.23</strong> — там, где нужен один статический бинарь без рантайма на целевой машине</li>
+<li>🧩 <strong>Компонентная библиотека</strong> Vue 3 (Composition API, Pinia), OpenAPI/Swagger</li>
+<li>✅ <strong>Тестирование</strong>: pytest на бэкенде, Jest на фронтенде; code review, Scrum</li>
+</ul>
+<p><code>Python</code> <code>Django 4–5</code> <code>DRF</code> <code>httpx</code> <code>Keycloak</code> <code>Go</code> <code>Vue 3</code> <code>TypeScript</code> <code>PostgreSQL</code> <code>MongoDB</code> <code>Docker</code> <code>pytest</code> <code>Jest</code> <code>PyTorch</code> <code>TensorFlow</code> <code>Scikit-learn</code></p>
+<h3 id="-intel-corporation--ai-systems-engineer--fullstack-developer">🟢 Intel Corporation — AI Systems Engineer / FullStack Developer</h3>
+<p><strong>Февраль 2018 — Февраль 2022</strong> · <em>Semiconductor / AI &amp; ML</em></p>
+<ul>
+<li>🧠 <strong>Глубокое обучение и ML</strong>: обучение и дообучение моделей на TensorFlow 1.15–2.8 / Keras и PyTorch 1.x, классические алгоритмы на Scikit-learn 0.20–1.0</li>
+<li>🎛 <strong>Полный цикл модели</strong>: подготовка и разметка датасетов, выбор архитектуры, подбор гиперпараметров, регуляризация, метрики регрессии и классификации, инференс в проде</li>
+<li>🔬 <strong>Веб-инструменты</strong> анализа производительности ПО и HW: Python 3.6–3.9 (Django 2.0–4.0) + React 16 + D3.js</li>
+<li>🗃 <strong>Backend</strong>: REST API, PostgreSQL 9.6–13 + MongoDB 4.x; дашборды на больших выборках</li>
+<li>♻️ <strong>Пайплайны обучения и переобучения</strong>: подготовка данных, регулярный ретрейн, выкат весов в сервисы — MLOps до того, как это так назвали</li>
+<li>🧪 <strong>QA-автоматизация</strong> (pytest, unittest); мониторинг Grafana / Prometheus</li>
+</ul>
+<p><code>Python</code> <code>Django 2–4</code> <code>React</code> <code>TypeScript</code> <code>D3.js</code> <code>PostgreSQL</code> <code>MongoDB</code> <code>Docker</code> <code>Grafana</code> <code>TensorFlow</code> <code>Keras</code> <code>PyTorch</code> <code>Scikit-learn</code> <code>Deep Learning</code></p>
+<hr />
+<h2 id="-собственные-проекты">🚀 Собственные проекты</h2>
+<p>Пет-проекты в production — там я отвечаю за систему целиком: схему данных, архитектуру, деплой, мониторинг и восстановление после сбоев.</p>
+<h3 id="-interviews--офлайн-платформа-подготовки--production">📚 Interviews — офлайн-платформа подготовки · <code>production</code></h3>
+<p><em>Python · TypeScript · WebAssembly · Android · CI/CD</em></p>
+<ul>
+<li><strong>94 материала и 258 задач</strong> с исполнением кода прямо в браузере: <strong>Pyodide</strong> (Python в WASM) и <strong>sql.js</strong> — без сервера и без интернета</li>
+<li><strong>Один источник — три продукта</strong>: Markdown + Jupyter собираются в веб-версию, Telegram Mini App и Android-APK; сборка и релиз APK автоматизированы в CI</li>
+<li>Системная задача: офлайн-first — весь рантайм, поиск и подсветка кода упакованы в статику; прогресс хранится локально</li>
+</ul>
+<p><code>Python</code> <code>TypeScript</code> <code>WebAssembly</code> <code>Pyodide</code> <code>Android</code> <code>GitHub Actions</code></p>
+<h3 id="-финансовый-дашборд-по-данным-1с--production">💰 Финансовый дашборд по данным 1С · <code>production</code></h3>
+<p><em>Python · FastAPI · React · Plotly · pandas</em></p>
+<ul>
+<li>Веб-аналитика поверх бухгалтерии 1С: прямое чтение <code>.1CD</code> через onec_dtools (без COM, не блокирует боевую базу), in-memory кэш <strong>~1,3 млн проводок</strong></li>
+<li>Backend FastAPI + REST API: обороты по счетам, корреспонденция, топ-контрагенты, <strong>ABC-анализ</strong> (80/15/5), YoY-динамика</li>
+<li><strong>Прогноз кассовых разрывов</strong> (сценарный, 30/60/90 дней); health-check данных (дубли, отсутствующие реквизиты)</li>
+<li>Frontend: React SPA (Vite + TypeScript) + Plotly; Ruff + MyPy + basedpyright (strict), pre-commit, GitHub Actions CI</li>
+</ul>
+<p><code>Python</code> <code>FastAPI</code> <code>React</code> <code>TypeScript</code> <code>Plotly</code> <code>pandas</code> <code>GitHub Actions</code></p>
+<h3 id="-very-match--приём-заказов-и-аналитика--production">🎂 Very Match — приём заказов и аналитика · <code>production</code></h3>
+<p><em>Python · aiogram 3 · FastAPI · MongoDB · Docker</em></p>
+<ul>
+<li>Бот полного цикла приёма заказов: <strong>4 сценария на FSM</strong>, каталог с модификаторами через внешний API, синхронизация каждые 6 часов</li>
+<li><strong>Async-бэкенд</strong> FastAPI + MongoDB (motor), слой репозиториев и сервисов, Pydantic 2; реле «клиент ↔ менеджер» в форум-темах супергруппы</li>
+<li><strong>APScheduler</strong>: эскалации, напоминания об оплате, отложенные отзывы, авто-бэкап БД</li>
+<li><strong>Веб-дашборд</strong> (FastAPI + Chart.js): KPI, конверсия, сегментация клиентов; экспорт в CSV/XLSX</li>
+<li>Надёжность: анти-спам middleware, healthcheck, авто-рестарт polling, ротация логов</li>
+<li><strong>285 юнит-тестов</strong> · Ruff + MyPy + basedpyright · многостадийный Docker (non-root) · CI</li>
+</ul>
+<p><code>Python 3.14</code> <code>aiogram 3</code> <code>FastAPI</code> <code>MongoDB</code> <code>Pydantic 2</code> <code>APScheduler</code> <code>Docker</code> <code>pytest</code></p>
+<h3 id="-hproject--health-бот-с-распознаванием-еды--production">🥗 HProject — health-бот с распознаванием еды · <code>production</code></h3>
+<p><em>Python · FastAPI · PostgreSQL · LLM</em></p>
+<ul>
+<li>Расчёт КБЖУ по фотографии блюда: пайплайн <strong>«фото → LLM-распознавание → нормализация к справочнику → дневник питания»</strong></li>
+<li>Проектирование под ненадёжную внешнюю модель: таймауты, ретраи, деградация до ручного ввода при отказе LLM</li>
+<li>Дневник питания и статистика: агрегации по периодам, цели по калориям</li>
+</ul>
+<p><code>Python</code> <code>FastAPI</code> <code>PostgreSQL</code> <code>LLM</code> <code>aiogram</code></p>
+<h3 id="-vpntunnel--vpn-роутер-на-sing-box--self-hosted">🛡️ VPNTunnel — VPN-роутер на sing-box · <code>self-hosted</code></h3>
+<p><em>Python (stdlib) · asyncio · sing-box · launchd</em></p>
+<ul>
+<li>Парсинг подписок (VLESS/VMess/Trojan/Shadowsocks), async TCP-пинг пула серверов, выбор лучшего по доступности → стабильности → скорости</li>
+<li><strong>Двухфазная оценка</strong>: gate и стабильность для всех, реальный throughput — только для топ-3; sticky-логика и авто-откат конфига при провале</li>
+<li>Системная часть: генерация конфигов sing-box (TUN + typed DNS), автозапуск через launchd, Telegram-уведомления</li>
+<li>Чистый stdlib, <strong>69 тестов</strong>, ruff/mypy/basedpyright (strict) — 0 ошибок</li>
+</ul>
+<p><code>Python</code> <code>asyncio</code> <code>sing-box</code> <code>launchd</code> <code>pytest</code></p>
+<h3 id="-zentist-rpa--rpa-платформа-для-внешних-порталов--production">🤖 zentist-rpa — RPA-платформа для внешних порталов · <code>production</code></h3>
+<p><em>Python · Playwright · PostgreSQL · Docker</em></p>
+<ul>
+<li>Автоматизация работы с порталами без публичного API: браузерные сценарии на Playwright</li>
+<li>Устойчивость к сменам вёрстки: несколько стратегий поиска элементов, ретраи, журналирование каждого шага для разбора падений</li>
+<li>Очередь заданий и отчёты о выполнении</li>
+</ul>
+<p><code>Python</code> <code>Playwright</code> <code>PostgreSQL</code> <code>Docker</code></p>
+<hr />
+<h2 id="-образование">🎓 Образование</h2>
+<table>
+<thead>
+<tr>
+<th>Степень</th>
+<th>Год</th>
+<th>Учебное заведение</th>
+<th>Специальность</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🎓 <strong>Магистр</strong></td>
+<td>2021</td>
+<td>ННГУ им. Лобачевского (ИИТММ)</td>
+<td>Фундаментальная информатика и информационные технологии</td>
+</tr>
+<tr>
+<td>📚 <strong>Бакалавр</strong></td>
+<td>2019</td>
+<td>ННГУ им. Лобачевского (ИИТММ)</td>
+<td>Прикладная математика и информатика</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-языки">🌍 Языки</h2>
+<p>🇷🇺 <strong>Русский</strong> — родной  ·  🇬🇧 <strong>English</strong> — C1 (документация, переговоры, деловая переписка)  ·  🇮🇹 <strong>Italiano</strong> — A2</p>
+<hr />
+<h2 id="-дополнительно">🔎 Дополнительно</h2>
+<p><strong>Изучаю сейчас:</strong> Kubernetes (CKA), Apache Kafka, Rust (пет-проекты и CLI-утилиты, ~2 года), React Native</p>
+<p><strong>Форматы работы:</strong> Remote · Hybrid (Нижний Новгород) · командировки · проектная / частичная занятость</p>
+<p><strong>Открыта к ролям:</strong> Lead Developer / Team Lead · Senior Backend (Python / Go) · Senior FullStack · Senior Frontend (React / Vue)</p>
+<hr />
+<h2 id="-контакты">📞 Контакты</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Телефон</strong></td>
+<td>+7 (910) 791-30-18</td>
+</tr>
+<tr>
+<td><strong>Email</strong></td>
+<td><a href="mailto:i@mprotas.ru">i@mprotas.ru</a></td>
+</tr>
+<tr>
+<td><strong>Telegram</strong></td>
+<td><a href="https://t.me/vkusniypirogok">@vkusniypirogok</a></td>
+</tr>
+<tr>
+<td><strong>GitHub</strong></td>
+<td><a href="https://github.com/Fulmo">github.com/Fulmo</a></td>
+</tr>
+<tr>
+<td><strong>Локация</strong></td>
+<td>Нижний Новгород</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Резюме обновлено: Август 2026</em></p>
+
+  </article>
+</section>
+<section class="page" data-lang="en" lang="en">
+  <header class="hero">
+    <div class="hero-main">
+      <h1>Maria Protas</h1>
+      <p class="headline">Lead Developer / Senior Full-Stack Engineer (Python, Go) / ML</p>
+      <p class="tagline">Backend Python / Go, full-stack, ML · 7+ years · remote (UTC+3) or relocation</p>
+      <ul class="contacts">
+<li><span class="k">Email</span><a href="mailto:i@mprotas.ru">i@mprotas.ru</a></li>
+<li><span class="k">Telegram</span><a href="https://t.me/vkusniypirogok">@vkusniypirogok</a></li>
+<li><span class="k">GitHub</span><a href="https://github.com/Fulmo">github.com/Fulmo</a></li>
+<li><span class="k">Location</span>Nizhny Novgorod, Russia (UTC+3)</li>
+      </ul>
+      <div class="downloads"><a class="dl" href="Protas_Maria_LeadDeveloper_2026_EN.pdf" download>Download CV (2 pages)</a>
+<a class="dl" href="Protas_Maria_LeadDeveloper_2026_EN_Detailed.pdf" download>Download full CV</a>
+<a class="dl" href="Protas_Maria_LeadDeveloper_2026_EN.docx" download>Download DOCX</a></div>
+    </div>
+  </header>
+  <nav class="sections" aria-label="Sections"><a href="#-at-a-glance">At a glance</a>
+<a href="#-profile">Profile</a>
+<a href="#-tech-stack">Tech stack</a>
+<a href="#-experience">Experience</a>
+<a href="#-side-projects">Side projects</a>
+<a href="#-education">Education</a>
+<a href="#-contact">Contact</a></nav>
+  <article class="resume">
+<h2 id="-at-a-glance">📊 At a glance</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">🏆 Experience</th>
+<th style="text-align:center">🏢 Companies</th>
+<th style="text-align:center">👥 Team led</th>
+<th style="text-align:center">💎 Level</th>
+<th style="text-align:center">🌍 Availability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>7+ years</strong></td>
+<td style="text-align:center">Intel · YADRO · Transneft</td>
+<td style="text-align:center"><strong>9 engineers</strong></td>
+<td style="text-align:center"><strong>Senior / Lead</strong></td>
+<td style="text-align:center"><strong>Remote · UTC+3</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>English C1</strong> · overlaps 2–4 hours with CET/EET working hours · open to relocation</p>
+<hr />
+<h2 id="-profile">👩‍💻 Profile</h2>
+<p><strong>Engineer</strong> with 7+ years of commercial experience, currently leading a team of nine. I still write code every day — leadership was added to the engineering work, not substituted for it.</p>
+<p><strong>Backend</strong> is my core specialisation: Python (advanced) and Go (working knowledge, production services since 2020). Microservices, gRPC contracts, asynchronous messaging over Kafka and RabbitMQ, PostgreSQL tuning under load. I design whole systems: service boundaries, data model, fault tolerance, deployment, monitoring.</p>
+<p><strong>Full-stack</strong> in production: React and TypeScript SPAs on top of my own APIs, Next.js where SSR pays off, Vue 3 where history left it.</p>
+<p><strong>Engineering culture</strong>: tests as part of the definition of done (coverage 20% → 75%+ on the current platform), mandatory code review, static type checking in CI.</p>
+<p><strong>ML and deep learning</strong> — a second track, not a footnote: at Intel and YADRO I trained and fine-tuned models (TensorFlow / Keras, PyTorch, scikit-learn), ran hyperparameter search and solved regression and classification problems end to end — from dataset preparation to inference in production.</p>
+<p>Open to: <strong>Lead Developer · Team Lead · Senior Backend (Python / Go) · Senior Full-Stack · ML Engineer</strong></p>
+<hr />
+<h2 id="-tech-stack">🛠 Tech stack</h2>
+<h3 id="backend">Backend</h3>
+<pre><code>Python (advanced) ●●●●●  FastAPI 0.115+ · Django 4.2–6.1 / DRF 3.15+ · asyncio · Celery · SQLAlchemy async · Pydantic 2
+HTTP clients      ●●●●●  httpx 0.28 (async, timeouts, retries, pools) · requests · aiohttp
+Authentication    ●●●●○  Keycloak 26 (OIDC / SSO) · OAuth2 · JWT · roles and permissions
+Go (working)      ●●●●○  Gin · Echo · goroutines · channels · context · sync · gRPC · static binaries
+gRPC / protobuf   ●●●●○  service-to-service contracts · streaming · client generation
+Microservices     ●●●●○  service boundaries · API gateway · idempotency · graceful degradation
+Message queues    ●●●○○  Kafka (topics, partitions, consumer groups) · RabbitMQ (exchanges, DLQ, retries)
+REST API          ●●●●○  OpenAPI · Swagger · WebSocket · versioning
+Node.js           ●●●○○  Express · Nest.js — services and BFF layers for the frontend
+Rust              ●●○○○  side projects and CLI tools (~2 years): ownership, tokio, serde, cargo
+</code></pre>
+<h3 id="frontend">Frontend</h3>
+<pre><code>React             ●●●●○  React 18+ · hooks · context · Redux/Zustand · React Query
+TypeScript        ●●●●○  strict · generics · typed API contracts · ES2022+
+Next.js           ●●●●○  SSR/SSG · App Router · load-time optimisation
+Vue.js / Nuxt     ●●●●○  Vue 3 · Composition API · Pinia · Nuxt 3
+HTML5 / CSS3      ●●●●●  Tailwind CSS · responsive layout · accessibility
+React Native      ●●○○○  Expo · mobile screens over a shared API (side projects)
+</code></pre>
+<h3 id="databases">Databases</h3>
+<pre><code>PostgreSQL        ●●●●●  query plans · indexes · partitioning · transactions and locking
+MongoDB           ●●●●○  motor (async) · aggregation pipelines · schema and index design
+Redis             ●●●●○  caching · pub/sub · task queues · distributed locks
+</code></pre>
+<h3 id="system-design">System design</h3>
+<pre><code>Architecture      ●●●●○  monolith decomposition · sync vs async trade-offs · data modelling
+Reliability       ●●●●○  timeouts · retries with backoff · circuit breakers · idempotency
+Scalability       ●●●○○  caching · connection pooling · profiling bottlenecks
+</code></pre>
+<h3 id="qa-and-code-quality">QA and code quality</h3>
+<pre><code>pytest            ●●●●●  unit · parametrisation · fixtures · mocks · coverage
+Integration       ●●●●○  testcontainers · test databases · API contract tests
+UI automation     ●●●●○  Playwright · Jest / Vitest
+Process           ●●●●●  code review · CI quality gate · Ruff · MyPy · basedpyright (strict) · pre-commit
+</code></pre>
+<h3 id="devops-and-infrastructure">DevOps and infrastructure</h3>
+<pre><code>Docker / K8s      ●●●●○  multi-stage builds · Docker Compose · Helm · Kubernetes
+CI/CD             ●●●●○  GitLab CI · GitHub Actions · tests and linters on every PR
+Linux / Bash      ●●●●●  automation · scripting · server administration
+Observability     ●●●●○  Grafana · Prometheus · ELK · structured logging
+</code></pre>
+<h3 id="sre">SRE</h3>
+<pre><code>Kubernetes        ●●●●○  1.30+ · Helm · rollouts, resource limits, health probes
+CI/CD             ●●●●○  GitLab CI · GitHub Actions · quality gate, tests on every merge
+Monitoring        ●●●●○  Grafana · Prometheus — dashboards, alerts, service metrics
+SRE practices     ●●●●○  SLA/SLO · scheduled on-call · incident reviews and postmortems
+</code></pre>
+<h3 id="ai--ml">AI / ML</h3>
+<pre><code>LLM / RAG         ●●●●○  OpenAI · Anthropic (Claude) API · RAG · function calling · LangChain
+Deep learning     ●●●●○  PyTorch · TensorFlow · Keras — CNN/RNN, training and fine-tuning
+Classical ML      ●●●●○  scikit-learn — regression, classification, cross-validation, metrics
+Model training    ●●●●○  dataset preparation · hyperparameter search · regularisation · production inference
+MLOps             ●●●○○  model versioning · scheduled retraining · weight rollout · post-release quality control
+</code></pre>
+<p><code>Git</code> <code>Nginx</code> <code>Jira</code> <code>Confluence</code> <code>Agile</code> <code>Scrum</code> <code>System Design</code> <code>Code Review</code></p>
+<hr />
+<h2 id="-experience">💼 Experience</h2>
+<h3 id="-transneft-technologies--tech-lead--lead-full-stack-developer">🔴 Transneft Technologies — Tech Lead / Lead Full-Stack Developer</h3>
+<p><strong>Jun 2025 — Present</strong> · <em>IT arm of Transneft, the national oil &amp; gas pipeline operator</em></p>
+<ul>
+<li>🏗 <strong>Designed the platform architecture</strong>: decomposed the monolith into services, defined boundaries and contracts, chose synchronous (gRPC) or asynchronous (queues) interaction per case</li>
+<li>🐍 <strong>Built the Python 3.12–3.14 backend</strong>: FastAPI 0.115+ and asyncio, SQLAlchemy async, Celery — the core business services</li>
+<li>🐹 <strong>Built Go 1.22–1.24 services</strong> for integrations and background processing on Gin, where latency and concurrency matter — goroutines, channels, context cancellation; static binaries with no runtime on the target host</li>
+<li>🚀 <strong>Shipped the React SPA in TypeScript</strong> on top of those APIs — forms, server-paginated tables, role-based access control</li>
+<li>🔄 <strong>Introduced asynchronous messaging</strong> over Kafka and RabbitMQ: idempotent handlers, dead-letter queues, retry policies</li>
+<li>✅ <strong>Made quality a process</strong>: pytest plus integration tests on testcontainers, a CI quality gate and mandatory review — raised coverage from <strong>20% to 75%+</strong></li>
+<li>📈 <strong>Cut response time of business-critical APIs by 40%</strong> by rewriting query plans and adding covering indexes in PostgreSQL</li>
+<li>👥 <strong>Led a team of 9+ engineers</strong>: task decomposition, code review, mentoring, 1-on-1s, hiring</li>
+<li>🤖 <strong>Integrated LLMs</strong> (OpenAI / Anthropic Claude API, RAG, function calling) into internal services</li>
+<li>🧠 <strong>Owned ML and MLOps on platform data</strong>: forecasting and classification models (PyTorch 2.x, scikit-learn 1.5+), hyperparameter search, model versioning and serving in production, quality monitoring after each rollout</li>
+<li>🛡 <strong>Ran the SRE side</strong>: SLA/SLO for critical services, Grafana/Prometheus alerting, incident reviews and postmortems, scheduled on-call; Kubernetes 1.30+, GitLab CI</li>
+<li>🔗 <strong>Built integrations and access control</strong>: httpx async clients (timeouts, retries, connection pools), single sign-on via Keycloak 26 (OIDC/SSO, JWT, roles)</li>
+</ul>
+<p><code>Python</code> <code>FastAPI</code> <code>httpx</code> <code>Keycloak</code> <code>Go</code> <code>gRPC</code> <code>Kafka</code> <code>RabbitMQ</code> <code>React</code> <code>TypeScript</code> <code>PostgreSQL</code> <code>Redis</code> <code>Docker</code> <code>K8s</code> <code>GitLab CI</code> <code>LLM</code> <code>PyTorch</code> <code>scikit-learn</code></p>
+<h3 id="-yadro--senior-full-stack-developer">🟣 YADRO — Senior Full-Stack Developer</h3>
+<p><strong>Feb 2023 — Jun 2025</strong> · <em>Hardware R&amp;D company — servers, storage systems and telecom equipment</em></p>
+<ul>
+<li>🌐 <strong>Built a web platform</strong> for hardware and software performance monitoring: Django 4.2–5.1 / DRF 3.14+ with Vue 3 and TypeScript 5</li>
+<li>🔌 <strong>Delivered REST and WebSocket APIs</strong> for real-time metrics; collected and aggregated device telemetry over httpx (async, timeouts, retries)</li>
+<li>🧠 <strong>Trained and fine-tuned models on telemetry</strong> (PyTorch 2.0–2.5, TensorFlow / Keras 2.12+, scikit-learn 1.3+): hyperparameter search, regression and classification tasks, evaluation on held-out data</li>
+<li>🛠 <strong>Operated the platform</strong>: builds and releases through GitLab CI, dashboards and alerts in Grafana / Prometheus, on-call duty and incident analysis</li>
+<li>🔐 <strong>Rolled out single sign-on</strong> and fine-grained permissions via Keycloak (OIDC/SSO)</li>
+<li>🐹 <strong>Wrote metric-collection tools in Go 1.20–1.23</strong> where a single static binary with no runtime on the target machine was required</li>
+<li>🧩 <strong>Maintained a Vue 3 component library</strong> (Composition API, Pinia) and OpenAPI/Swagger contracts</li>
+<li>✅ <strong>Covered the stack with tests</strong>: pytest on the backend, Jest on the frontend; code review, Scrum</li>
+</ul>
+<p><code>Python</code> <code>Django 4–5</code> <code>DRF</code> <code>httpx</code> <code>Keycloak</code> <code>Go</code> <code>Vue 3</code> <code>TypeScript</code> <code>PostgreSQL</code> <code>MongoDB</code> <code>Docker</code> <code>pytest</code> <code>Jest</code> <code>PyTorch</code> <code>TensorFlow</code> <code>scikit-learn</code></p>
+<h3 id="-intel-corporation--ai-systems-engineer--full-stack-developer">🟢 Intel Corporation — AI Systems Engineer / Full-Stack Developer</h3>
+<p><strong>Feb 2018 — Feb 2022</strong> · <em>Semiconductor / AI &amp; ML</em></p>
+<ul>
+<li>🧠 <strong>Trained and fine-tuned deep learning models</strong> on TensorFlow 1.15–2.8 / Keras and PyTorch 1.x, plus classical algorithms on scikit-learn 0.20–1.0</li>
+<li>🎛 <strong>Owned the full model lifecycle</strong>: dataset preparation and labelling, architecture selection, hyperparameter search, regularisation, regression and classification metrics, inference in production</li>
+<li>🔬 <strong>Built web tools</strong> for software and hardware performance analysis: Python 3.6–3.9 (Django 2.0–4.0) with React 16 and D3.js</li>
+<li>🗃 <strong>Backend work</strong>: REST APIs, PostgreSQL 9.6–13 and MongoDB 4.x; dashboards over large result sets</li>
+<li>♻️ <strong>Automated training and retraining pipelines</strong>: data preparation, scheduled retraining, weight rollout into services — MLOps before it was called that</li>
+<li>🧪 <strong>Automated QA</strong> (pytest, unittest) and monitoring in Grafana / Prometheus</li>
+</ul>
+<p><code>Python</code> <code>Django 2–4</code> <code>React</code> <code>TypeScript</code> <code>D3.js</code> <code>PostgreSQL</code> <code>MongoDB</code> <code>Docker</code> <code>Grafana</code> <code>TensorFlow</code> <code>Keras</code> <code>PyTorch</code> <code>scikit-learn</code> <code>Deep Learning</code></p>
+<hr />
+<h2 id="-side-projects">🚀 Side projects</h2>
+<p>Side projects running in production — there I own the whole system: data model, architecture, deployment, monitoring and recovery from failures.</p>
+<h3 id="-interviews--offline-interview-prep-platform--production">📚 Interviews — offline interview-prep platform · <code>production</code></h3>
+<p><em>Python · TypeScript · WebAssembly · Android · CI/CD</em></p>
+<ul>
+<li><strong>94 study modules and 258 exercises</strong> with code execution right in the browser: <strong>Pyodide</strong> (Python compiled to WASM) and <strong>sql.js</strong> — no server, no internet connection</li>
+<li><strong>One source, three products</strong>: Markdown and Jupyter notebooks build into a web app, a Telegram Mini App and an Android APK; build and APK release are automated in CI</li>
+<li>The systems problem was offline-first: the entire runtime, search index and syntax highlighting ship as static assets, progress is stored locally</li>
+</ul>
+<p><code>Python</code> <code>TypeScript</code> <code>WebAssembly</code> <code>Pyodide</code> <code>Android</code> <code>GitHub Actions</code></p>
+<h3 id="-financial-dashboard-over-accounting-data--production">💰 Financial dashboard over accounting data · <code>production</code></h3>
+<p><em>Python · FastAPI · React · Plotly · pandas</em></p>
+<ul>
+<li>Web analytics on top of a 1C accounting database (the accounting standard used across Russia): reads <code>.1CD</code> files directly through onec_dtools — no COM layer, no load on the live database — with an in-memory cache of <strong>~1.3M ledger entries</strong></li>
+<li>FastAPI backend and REST API: account turnover, counterparty correspondence, top counterparties, <strong>ABC analysis</strong> (80/15/5), year-over-year dynamics</li>
+<li><strong>Cash-gap forecasting</strong> (scenario-based, 30/60/90 days); data health checks for duplicates and missing attributes</li>
+<li>Frontend: React SPA (Vite + TypeScript) with Plotly; Ruff, MyPy and basedpyright (strict), pre-commit, GitHub Actions CI</li>
+</ul>
+<p><code>Python</code> <code>FastAPI</code> <code>React</code> <code>TypeScript</code> <code>Plotly</code> <code>pandas</code> <code>GitHub Actions</code></p>
+<h3 id="-very-match--order-intake-and-analytics-bot--production">🎂 Very Match — order intake and analytics bot · <code>production</code></h3>
+<p><em>Python · aiogram 3 · FastAPI · MongoDB · Docker</em></p>
+<ul>
+<li>End-to-end order intake bot: <strong>4 FSM-driven scenarios</strong>, a catalogue with modifiers pulled from an external API and synchronised every 6 hours</li>
+<li><strong>Async backend</strong> on FastAPI and MongoDB (motor), repository and service layers, Pydantic 2; a customer-to-manager relay built on supergroup forum topics</li>
+<li><strong>APScheduler</strong> jobs: escalations, payment reminders, delayed review requests, automated database backups</li>
+<li><strong>Web dashboard</strong> (FastAPI + Chart.js): KPIs, conversion, customer segmentation; CSV/XLSX export</li>
+<li>Reliability: anti-spam middleware, health checks, automatic polling restart, log rotation</li>
+<li><strong>285 unit tests</strong> · Ruff, MyPy, basedpyright · multi-stage Docker build (non-root) · CI</li>
+</ul>
+<p><code>Python 3.14</code> <code>aiogram 3</code> <code>FastAPI</code> <code>MongoDB</code> <code>Pydantic 2</code> <code>APScheduler</code> <code>Docker</code> <code>pytest</code></p>
+<h3 id="-hproject--health-bot-with-food-recognition--production">🥗 HProject — health bot with food recognition · <code>production</code></h3>
+<p><em>Python · FastAPI · PostgreSQL · LLM</em></p>
+<ul>
+<li>Calorie and macro estimation from a photo of a meal: the pipeline runs <strong>photo → LLM recognition → normalisation against a reference database → food diary</strong></li>
+<li>Designed around an unreliable external model: timeouts, retries, graceful degradation to manual entry when the LLM fails</li>
+<li>Food diary and statistics: aggregation by period, calorie targets</li>
+</ul>
+<p><code>Python</code> <code>FastAPI</code> <code>PostgreSQL</code> <code>LLM</code> <code>aiogram</code></p>
+<h3 id="-vpntunnel--vpn-router-on-sing-box--self-hosted">🛡️ VPNTunnel — VPN router on sing-box · <code>self-hosted</code></h3>
+<p><em>Python (stdlib) · asyncio · sing-box · launchd</em></p>
+<ul>
+<li>Parses subscriptions (VLESS/VMess/Trojan/Shadowsocks), async TCP-pings the server pool and picks the best one by availability → stability → throughput</li>
+<li><strong>Two-phase evaluation</strong>: gate and stability checks for every server, real throughput measured only for the top 3; sticky selection and automatic config rollback on failure</li>
+<li>Systems side: sing-box config generation (TUN with typed DNS), autostart through launchd, Telegram notifications</li>
+<li>Pure stdlib, <strong>69 tests</strong>, ruff/mypy/basedpyright (strict) — zero errors</li>
+</ul>
+<p><code>Python</code> <code>asyncio</code> <code>sing-box</code> <code>launchd</code> <code>pytest</code></p>
+<h3 id="-zentist-rpa--rpa-platform-for-external-portals--production">🤖 zentist-rpa — RPA platform for external portals · <code>production</code></h3>
+<p><em>Python · Playwright · PostgreSQL · Docker</em></p>
+<ul>
+<li>Automates work with portals that expose no public API: browser scenarios on Playwright</li>
+<li>Resilient to markup changes: several element-lookup strategies, retries, step-by-step journaling for failure analysis</li>
+<li>Job queue and execution reports</li>
+</ul>
+<p><code>Python</code> <code>Playwright</code> <code>PostgreSQL</code> <code>Docker</code></p>
+<hr />
+<h2 id="-education">🎓 Education</h2>
+<table>
+<thead>
+<tr>
+<th>Degree</th>
+<th>Year</th>
+<th>Institution</th>
+<th>Field</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🎓 <strong>M.Sc.</strong></td>
+<td>2021</td>
+<td>Lobachevsky State University of Nizhny Novgorod (UNN)</td>
+<td>Fundamental Informatics and Information Technology</td>
+</tr>
+<tr>
+<td>📚 <strong>B.Sc.</strong></td>
+<td>2019</td>
+<td>Lobachevsky State University of Nizhny Novgorod (UNN)</td>
+<td>Applied Mathematics and Computer Science</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="-languages">🌍 Languages</h2>
+<p>🇷🇺 <strong>Russian</strong> — native  ·  🇬🇧 <strong>English</strong> — C1 (documentation, negotiations, business correspondence)  ·  🇮🇹 <strong>Italian</strong> — A2</p>
+<hr />
+<h2 id="-additional">🔎 Additional</h2>
+<p><strong>Currently learning:</strong> Kubernetes (CKA), Apache Kafka, Rust (side projects and CLI tools, ~2 years), React Native</p>
+<p><strong>Work setup:</strong> Remote · hybrid in Nizhny Novgorod · open to relocation · business trips · project-based or part-time engagements</p>
+<p><strong>Open to roles:</strong> Lead Developer / Team Lead · Senior Backend (Python / Go) · Senior Full-Stack · Senior Frontend (React / Vue)</p>
+<hr />
+<h2 id="-contact">📞 Contact</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Email</strong></td>
+<td><a href="mailto:i@mprotas.ru">i@mprotas.ru</a></td>
+</tr>
+<tr>
+<td><strong>Telegram</strong></td>
+<td><a href="https://t.me/vkusniypirogok">@vkusniypirogok</a></td>
+</tr>
+<tr>
+<td><strong>GitHub</strong></td>
+<td><a href="https://github.com/Fulmo">github.com/Fulmo</a></td>
+</tr>
+<tr>
+<td><strong>Location</strong></td>
+<td>Nizhny Novgorod, Russia — UTC+3, 2–4 hours of overlap with CET/EET</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>Updated: August 2026</em></p>
+
+  </article>
+</section>
+</main>
+<footer>Updated August 2026 · <a href="https://github.com/Fulmo">github.com/Fulmo</a> · Русская и английская версии одного резюме</footer>
+<script type="application/json" id="page-meta">{"ru": {"title": "Мария Протас — Lead Developer / Senior FullStack Developer (Python, Go) / ML", "name": "Мария Протас"}, "en": {"title": "Maria Protas — Lead Developer / Senior Full-Stack Engineer (Python, Go) / ML", "name": "Maria Protas"}}</script>
+<script>
+(function () {
+  var pages = Array.prototype.slice.call(document.querySelectorAll('.page'));
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('.switch button'));
+  var meta = JSON.parse(document.getElementById('page-meta').textContent);
+  var brand = document.querySelector('.brand-name');
+
+  function apply(lang, remember) {
+    if (!meta[lang]) { lang = pages[0].dataset.lang; }
+    pages.forEach(function (p) { p.hidden = p.dataset.lang !== lang; });
+    buttons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+    document.documentElement.lang = lang;
+    document.title = meta[lang].title;
+    brand.textContent = meta[lang].name;
+    if (remember) {
+      try { localStorage.setItem('resume-lang', lang); } catch (e) { /* приватный режим */ }
+      var url = new URL(window.location.href);
+      url.searchParams.set('lang', lang);
+      history.replaceState(null, '', url);
+    }
+  }
+
+  var stored = null;
+  try { stored = localStorage.getItem('resume-lang'); } catch (e) { /* приватный режим */ }
+  var initial = new URLSearchParams(window.location.search).get('lang') || stored || navigator.language.slice(0, 2);
+  apply(initial, false);
+
+  buttons.forEach(function (b) {
+    b.addEventListener('click', function () { apply(b.dataset.lang, true); });
+  });
+})();
+</script>
+</body>
+</html>
