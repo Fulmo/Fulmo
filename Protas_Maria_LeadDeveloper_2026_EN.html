@@ -109,8 +109,8 @@ font-weight: 650;
 </head>
 <body>
 <h1 id="maria-protas">Maria Protas</h1>
-<h2 id="lead-developer-senior-full-stack-engineer-python-go">Lead
-Developer · Senior Full-Stack Engineer (Python, Go)</h2>
+<h2 id="lead-developer-senior-full-stack-engineer-python-go-sdet">Lead
+Developer · Senior Full-Stack Engineer (Python, Go) · SDET</h2>
 <p><a href="mailto:i@mprotas.ru" class="email">i@mprotas.ru</a> · <a href="https://t.me/vkusniypirogok">t.me/vkusniypirogok</a> · <a href="https://github.com/Fulmo">github.com/Fulmo</a> · Nizhny Novgorod,
 Russia (UTC+3, 2–4h overlap with CET/EET) · English C1 · Remote or
 relocation</p>
@@ -121,9 +121,11 @@ team of 11 engineers and still writing production code daily. Core
 specialisation is backend — Python (advanced) and Go (working
 knowledge): microservices, gRPC contracts, Kafka and RabbitMQ messaging,
 PostgreSQL under load. Comfortable owning a system end to end: service
-boundaries, data model, fault tolerance, deployment and monitoring.
-Second track is machine learning — trained and served models in
-production at Intel and YADRO, now including LLM integrations.</p>
+boundaries, data model, fault tolerance, deployment and monitoring —
+including the test infrastructure, which I build as code (fixtures,
+testcontainers, contract checks, UI automation, load profiles). Second
+track is machine learning — trained and served models in production at
+Intel and YADRO, now including LLM integrations.</p>
 <h2 id="core-skills">Core skills</h2>
 <ul>
 <li><strong>Backend</strong> — Python (FastAPI, Django/DRF, asyncio,
@@ -139,9 +141,13 @@ GitLab CI, GitHub Actions, Nginx, Linux, Grafana, Prometheus, ELK</li>
 <li><strong>ML / AI</strong> — PyTorch, TensorFlow / Keras,
 scikit-learn, model training and serving, MLOps; OpenAI and Anthropic
 APIs, RAG, function calling</li>
+<li><strong>Test automation / SDET</strong> — pytest (asyncio, mock,
+xdist, coverage), testcontainers, Playwright, Jest/Vitest, OpenAPI
+contract testing (schemathesis), WireMock stubs, Faker and factory-boy,
+hypothesis, Locust and k6, Allure reports</li>
 <li><strong>Practices</strong> — system design, SLA/SLO and on-call,
-incident postmortems, pytest and testcontainers, Playwright, code
-review, CI quality gates (Ruff, MyPy, basedpyright)</li>
+incident postmortems, code review, CI quality gates (Ruff, MyPy,
+basedpyright)</li>
 </ul>
 <h2 id="experience">Experience</h2>
 <h3 id="tech-lead-lead-full-stack-developer-transneft-technologies">Tech
@@ -155,9 +161,10 @@ or asynchronous (Kafka, RabbitMQ) interaction per case</li>
 <li>Led a team of 11 engineers — task decomposition, code review,
 mentoring, 1-on-1s and hiring — while remaining a hands-on
 contributor</li>
-<li>Raised test coverage from 20% to 75%+ by introducing pytest with
-testcontainers-based integration tests, a CI quality gate and mandatory
-review</li>
+<li>Raised test coverage from 20% to 75%+ by building the platform’s
+test infrastructure: fixtures and data factories, testcontainers-based
+integration tests, OpenAPI contract checks, parallel runs and Allure
+reports in a CI quality gate</li>
 <li>Cut response time of business-critical APIs by 40% through
 PostgreSQL query-plan rewrites and covering indexes</li>
 <li>Built core business services in Python 3.12–3.14 (FastAPI, asyncio,

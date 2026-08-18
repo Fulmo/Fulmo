@@ -201,13 +201,20 @@ left it.</p>
 <p><strong>Engineering culture</strong>: tests as part of the definition
 of done (coverage 20% → 75%+ on the current platform), mandatory code
 review, static type checking in CI.</p>
+<p><strong>SDET side</strong>: I build test infrastructure myself and
+treat it as code — fixtures and data factories, integration tests on
+testcontainers, stubs for external APIs, OpenAPI contract checks,
+Playwright UI automation, parallel runs and reports in CI. Quality is
+not a role standing next to development but a property of the pipeline:
+until the suite runs on every merge, “done” has not happened.</p>
 <p><strong>ML and deep learning</strong> — a second track, not a
 footnote: at Intel and YADRO I trained and fine-tuned models (TensorFlow
 / Keras, PyTorch, scikit-learn), ran hyperparameter search and solved
 regression and classification problems end to end — from dataset
 preparation to inference in production.</p>
 <p>Open to: <strong>Lead Developer · Team Lead · Senior Backend (Python
-/ Go) · Senior Full-Stack · ML Engineer</strong></p>
+/ Go) · Senior Full-Stack · SDET / Test Automation · ML
+Engineer</strong></p>
 <hr />
 <h2 id="tech-stack">🛠 Tech stack</h2>
 <h3 id="backend">Backend</h3>
@@ -236,10 +243,14 @@ Redis             ●●●●○  caching · pub/sub · task queues · distribu
 <pre><code>Architecture      ●●●●○  monolith decomposition · sync vs async trade-offs · data modelling
 Reliability       ●●●●○  timeouts · retries with backoff · circuit breakers · idempotency
 Scalability       ●●●○○  caching · connection pooling · profiling bottlenecks</code></pre>
-<h3 id="qa-and-code-quality">QA and code quality</h3>
-<pre><code>pytest            ●●●●●  unit · parametrisation · fixtures · mocks · coverage
-Integration       ●●●●○  testcontainers · test databases · API contract tests
+<h3 id="qa-sdet-and-code-quality">QA / SDET and code quality</h3>
+<pre><code>pytest            ●●●●●  unit · parametrisation · fixtures · mocks · coverage (pytest-cov)
+pytest ecosystem  ●●●●○  pytest-asyncio · pytest-mock · pytest-xdist (parallel runs) · Allure reports
+Integration       ●●●●○  testcontainers · test databases · WireMock and external-API stubs
+API contracts     ●●●●○  OpenAPI contract testing · schemathesis · Postman / Newman
 UI automation     ●●●●○  Playwright · Jest / Vitest
+Test data         ●●●○○  Faker · factory-boy · hypothesis (property-based)
+Load testing      ●●●○○  Locust · k6 — load profiles, finding bottlenecks
 Process           ●●●●●  code review · CI quality gate · Ruff · MyPy · basedpyright (strict) · pre-commit</code></pre>
 <h3 id="devops-and-infrastructure">DevOps and infrastructure</h3>
 <pre><code>Docker / K8s      ●●●●○  multi-stage builds · Docker Compose · Helm · Kubernetes
@@ -285,6 +296,12 @@ RabbitMQ: idempotent handlers, dead-letter queues, retry policies</li>
 <li>✅ <strong>Made quality a process</strong>: pytest plus integration
 tests on testcontainers, a CI quality gate and mandatory review — raised
 coverage from <strong>20% to 75%+</strong></li>
+<li>🧪 <strong>Built the platform’s test infrastructure (SDET)</strong>:
+a layer of fixtures and data factories (Faker, factory-boy),
+dependencies spun up in testcontainers, stubs for external APIs, OpenAPI
+contract checks (schemathesis), parallel runs (pytest-xdist) and Allure
+reports in GitLab CI; Locust load profiles for business-critical
+endpoints before rollout</li>
 <li>📈 <strong>Cut response time of business-critical APIs by
 40%</strong> by rewriting query plans and adding covering indexes in
 PostgreSQL</li>
@@ -334,8 +351,9 @@ where a single static binary with no runtime on the target machine was
 required</li>
 <li>🧩 <strong>Maintained a Vue 3 component library</strong>
 (Composition API, Pinia) and OpenAPI/Swagger contracts</li>
-<li>✅ <strong>Covered the stack with tests</strong>: pytest on the
-backend, Jest on the frontend; code review, Scrum</li>
+<li>✅ <strong>Automated regression across the stack</strong>: pytest on
+the backend, Jest on the frontend, Playwright UI scenarios, all running
+on every merge in GitLab CI; code review, Scrum</li>
 </ul>
 <p><code>Python</code> <code>Django 4–5</code> <code>DRF</code>
 <code>httpx</code> <code>Keycloak</code> <code>Go</code>
@@ -363,8 +381,10 @@ MongoDB 4.x; dashboards over large result sets</li>
 <li>♻️ <strong>Automated training and retraining pipelines</strong>:
 data preparation, scheduled retraining, weight rollout into services —
 MLOps before it was called that</li>
-<li>🧪 <strong>Automated QA</strong> (pytest, unittest) and monitoring
-in Grafana / Prometheus</li>
+<li>🧪 <strong>Automated testing of the analysis tooling</strong>
+(pytest, unittest): regression suites over real datasets, checks that
+model metrics stayed stable between runs; monitoring in Grafana /
+Prometheus</li>
 </ul>
 <p><code>Python</code> <code>Django 2–4</code> <code>React</code>
 <code>TypeScript</code> <code>D3.js</code> <code>PostgreSQL</code>
@@ -526,8 +546,8 @@ Rust (side projects and CLI tools, ~2 years), React Native</p>
 open to relocation · business trips · project-based or part-time
 engagements</p>
 <p><strong>Open to roles:</strong> Lead Developer / Team Lead · Senior
-Backend (Python / Go) · Senior Full-Stack · Senior Frontend (React /
-Vue)</p>
+Backend (Python / Go) · Senior Full-Stack · SDET / Senior QA Automation
+· Senior Frontend (React / Vue)</p>
 <hr />
 <h2 id="contact">📞 Contact</h2>
 <table>

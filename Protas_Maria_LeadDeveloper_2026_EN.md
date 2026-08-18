@@ -1,6 +1,6 @@
 # Maria Protas
 
-## Lead Developer · Senior Full-Stack Engineer (Python, Go)
+## Lead Developer · Senior Full-Stack Engineer (Python, Go) · SDET
 
 <i@mprotas.ru> · [t.me/vkusniypirogok](https://t.me/vkusniypirogok) · [github.com/Fulmo](https://github.com/Fulmo) · Nizhny Novgorod, Russia (UTC+3, 2–4h overlap with CET/EET) · English C1 · Remote or relocation
 
@@ -8,7 +8,7 @@
 
 ## Summary
 
-Engineer with 7+ years of commercial experience, currently leading a team of 11 engineers and still writing production code daily. Core specialisation is backend — Python (advanced) and Go (working knowledge): microservices, gRPC contracts, Kafka and RabbitMQ messaging, PostgreSQL under load. Comfortable owning a system end to end: service boundaries, data model, fault tolerance, deployment and monitoring. Second track is machine learning — trained and served models in production at Intel and YADRO, now including LLM integrations.
+Engineer with 7+ years of commercial experience, currently leading a team of 11 engineers and still writing production code daily. Core specialisation is backend — Python (advanced) and Go (working knowledge): microservices, gRPC contracts, Kafka and RabbitMQ messaging, PostgreSQL under load. Comfortable owning a system end to end: service boundaries, data model, fault tolerance, deployment and monitoring — including the test infrastructure, which I build as code (fixtures, testcontainers, contract checks, UI automation, load profiles). Second track is machine learning — trained and served models in production at Intel and YADRO, now including LLM integrations.
 
 ## Core skills
 
@@ -17,7 +17,8 @@ Engineer with 7+ years of commercial experience, currently leading a team of 11 
 - **Data** — PostgreSQL (query plans, indexing, partitioning), MongoDB, Redis
 - **Infrastructure** — Docker, Kubernetes 1.30+, Helm, GitLab CI, GitHub Actions, Nginx, Linux, Grafana, Prometheus, ELK
 - **ML / AI** — PyTorch, TensorFlow / Keras, scikit-learn, model training and serving, MLOps; OpenAI and Anthropic APIs, RAG, function calling
-- **Practices** — system design, SLA/SLO and on-call, incident postmortems, pytest and testcontainers, Playwright, code review, CI quality gates (Ruff, MyPy, basedpyright)
+- **Test automation / SDET** — pytest (asyncio, mock, xdist, coverage), testcontainers, Playwright, Jest/Vitest, OpenAPI contract testing (schemathesis), WireMock stubs, Faker and factory-boy, hypothesis, Locust and k6, Allure reports
+- **Practices** — system design, SLA/SLO and on-call, incident postmortems, code review, CI quality gates (Ruff, MyPy, basedpyright)
 
 ## Experience
 
@@ -27,7 +28,7 @@ Engineer with 7+ years of commercial experience, currently leading a team of 11 
 
 - Designed the platform architecture: decomposed a monolith into services, defined boundaries and contracts, and chose synchronous (gRPC) or asynchronous (Kafka, RabbitMQ) interaction per case
 - Led a team of 11 engineers — task decomposition, code review, mentoring, 1-on-1s and hiring — while remaining a hands-on contributor
-- Raised test coverage from 20% to 75%+ by introducing pytest with testcontainers-based integration tests, a CI quality gate and mandatory review
+- Raised test coverage from 20% to 75%+ by building the platform's test infrastructure: fixtures and data factories, testcontainers-based integration tests, OpenAPI contract checks, parallel runs and Allure reports in a CI quality gate
 - Cut response time of business-critical APIs by 40% through PostgreSQL query-plan rewrites and covering indexes
 - Built core business services in Python 3.12–3.14 (FastAPI, asyncio, SQLAlchemy async, Celery) and latency-sensitive integration services in Go 1.22–1.24
 - Owned the SRE side: SLA/SLO for critical services, Grafana and Prometheus alerting, incident postmortems, scheduled on-call, Kubernetes 1.30+ and GitLab CI

@@ -198,12 +198,19 @@ Go (Middle+). Микросервисы, gRPC-контракты, асинхро�
 <p><strong>Инженерная культура</strong>: тесты как часть определения
 готовности (покрытие 20% → 75%+ на текущем проекте), обязательное code
 review, статическая проверка типов в CI.</p>
+<p><strong>SDET-часть работы</strong>: тестовую инфраструктуру строю
+сама и как код — фикстуры и фабрики данных, интеграционные тесты на
+testcontainers, стабы внешних API, контрактные проверки по OpenAPI,
+UI-автотесты на Playwright, параллельный прогон и отчёты в CI. Качество
+для меня — не отдельная роль рядом с разработкой, а свойство пайплайна:
+пока автотесты не гоняются на каждый мерж, «готово» не наступает.</p>
 <p><strong>ML и глубокое обучение</strong> — второе направление: в Intel
 и YADRO обучала и дообучала модели (TensorFlow / Keras, PyTorch,
 Scikit-learn), подбирала гиперпараметры, решала задачи регрессии и
 классификации — от подготовки датасета до инференса в проде.</p>
 <p>Открыта к позициям: <strong>Lead Developer · Team Lead · Senior
-Backend (Python / Go) · Senior FullStack · ML Engineer</strong></p>
+Backend (Python / Go) · Senior FullStack · SDET / Test Automation · ML
+Engineer</strong></p>
 <hr />
 <h2 id="технический-стек">🛠 Технический стек</h2>
 <h3 id="backend">Backend</h3>
@@ -232,10 +239,14 @@ Redis             ●●●●○  кэш · pub/sub · очереди зада�
 <pre><code>Проектирование    ●●●●○  декомпозиция монолита · выбор синхрон/асинхрон · схема данных
 Надёжность        ●●●●○  таймауты · ретраи с backoff · circuit breaker · идемпотентность
 Нагрузка          ●●●○○  кэширование · пулы соединений · профилирование узких мест</code></pre>
-<h3 id="qa-и-качество-кода">QA и качество кода</h3>
-<pre><code>pytest            ●●●●●  юнит · параметризация · фикстуры · моки · покрытие
-Интеграционные    ●●●●○  testcontainers · тестовая БД · контрактные тесты API
+<h3 id="qa-sdet-и-качество-кода">QA / SDET и качество кода</h3>
+<pre><code>pytest            ●●●●●  юнит · параметризация · фикстуры · моки · покрытие (pytest-cov)
+Экосистема pytest ●●●●○  pytest-asyncio · pytest-mock · pytest-xdist (параллельный прогон) · Allure-отчёты
+Интеграционные    ●●●●○  testcontainers · тестовая БД · WireMock и стабы внешних API
+API-контракты     ●●●●○  контрактные тесты по OpenAPI · schemathesis · Postman / Newman
 UI-автотесты      ●●●●○  Playwright · Jest / Vitest
+Тестовые данные   ●●●○○  Faker · factory-boy · hypothesis (property-based)
+Нагрузка          ●●●○○  Locust · k6 — профили нагрузки, поиск узких мест
 Процесс           ●●●●●  code review · quality gate в CI · Ruff · MyPy · basedpyright (strict) · pre-commit</code></pre>
 <h3 id="devops-и-инфраструктура">DevOps и инфраструктура</h3>
 <pre><code>Docker / K8s      ●●●●○  многостадийные сборки · Docker Compose · Helm · Kubernetes
@@ -273,6 +284,12 @@ Enterprise IT</em></p>
 <li>✅ <strong>Подняла покрытие тестами с 20% до 75%+</strong>: ввела
 pytest и интеграционные тесты на testcontainers, quality gate в CI и
 обязательное ревью перед мержем</li>
+<li>🧪 <strong>Построила тестовую инфраструктуру платформы
+(SDET)</strong>: слой фикстур и фабрик данных (Faker, factory-boy),
+поднятие зависимостей в testcontainers, стабы внешних API, контрактные
+проверки по OpenAPI (schemathesis), параллельный прогон (pytest-xdist) и
+Allure-отчёты в GitLab CI; нагрузочные профили критичных ручек на Locust
+перед выкатом</li>
 <li>📈 <strong>Ускорила критичные API на 40%</strong>: переписала планы
 запросов и добавила покрывающие индексы в PostgreSQL</li>
 <li>🐍 <strong>Написала основные бизнес-сервисы на Python
@@ -331,8 +348,9 @@ Keycloak (OIDC/SSO)</li>
 машине</li>
 <li>🧩 <strong>Поддерживала компонентную библиотеку</strong> Vue 3
 (Pinia) и контракты OpenAPI/Swagger</li>
-<li>✅ <strong>Покрыла стек тестами</strong>: pytest на бэкенде, Jest на
-фронтенде; code review, Scrum</li>
+<li>✅ <strong>Автоматизировала регресс на всём стеке</strong>: pytest
+на бэкенде и Jest на фронтенде, UI-сценарии на Playwright, прогон на
+каждый мерж в GitLab CI; code review, Scrum</li>
 </ul>
 <p><code>Python</code> <code>Django 4–5</code> <code>DRF</code>
 <code>httpx</code> <code>Keycloak</code> <code>Go</code>
@@ -358,7 +376,9 @@ Scikit-learn 0.20–1.0</li>
 железа</strong>: Python 3.6–3.9 (Django 2.0–4.0), React 16, D3.js</li>
 <li>🗃 <strong>Отдала данные через REST API</strong>: PostgreSQL 9.6–13 и
 MongoDB 4.x, дашборды на больших выборках</li>
-<li>🧪 <strong>Автоматизировала QA</strong> (pytest, unittest) и
+<li>🧪 <strong>Автоматизировала тестирование инструментов
+анализа</strong> (pytest, unittest): регрессионные наборы на реальных
+датасетах, проверка стабильности метрик модели между прогонами;
 мониторинг в Grafana / Prometheus</li>
 </ul>
 <p><code>Python</code> <code>Django 2–4</code> <code>React</code>
@@ -515,8 +535,8 @@ C1 (документация, переговоры, деловая перепи�
 <p><strong>Форматы работы:</strong> Remote · Hybrid (Нижний Новгород) ·
 командировки · проектная / частичная занятость</p>
 <p><strong>Открыта к ролям:</strong> Lead Developer / Team Lead · Senior
-Backend (Python / Go) · Senior FullStack · Senior Frontend (React /
-Vue)</p>
+Backend (Python / Go) · Senior FullStack · SDET / Senior QA Automation ·
+Senior Frontend (React / Vue)</p>
 <hr />
 <h2 id="контакты">📞 Контакты</h2>
 <table>
