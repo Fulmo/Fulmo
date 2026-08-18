@@ -42,27 +42,27 @@ body {
 margin: 0;
 color: var(--text);
 background: #fff;
-font: 10.8pt/1.5 -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+font: 10.9pt/1.58 -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
 max-width: 100%;
 }
 h1 {
 margin: 0 0 .1em;
-font-family: "Iowan Old Style", Georgia, serif;
-font-size: 25pt;
+font-family: "New York", Charter, "PT Serif", Georgia, serif;
+font-size: 26pt;
 font-weight: 600;
 letter-spacing: -.01em;
 }
 h2 {
-margin: 1.5em 0 .5em;
-padding-top: .45em;
+margin: 1.7em 0 .6em;
+padding-top: .55em;
 border-top: 1px solid var(--line);
-font-family: "Iowan Old Style", Georgia, serif;
-font-size: 14pt;
+font-family: "New York", Charter, "PT Serif", Georgia, serif;
+font-size: 14.5pt;
 page-break-after: avoid;
 }
 h3 {
-margin: 1.1em 0 .15em;
-font-size: 11.5pt;
+margin: 1.3em 0 .2em;
+font-size: 11.8pt;
 page-break-after: avoid;
 }
 h1 + h2 {
@@ -80,7 +80,7 @@ margin: .4em 0;
 padding-left: 1.1em;
 }
 li {
-margin: .22em 0;
+margin: .32em 0;
 page-break-inside: avoid;
 }
 a {
@@ -114,15 +114,15 @@ padding: .6em .7em;
 background: var(--code-bg);
 border: 1px solid var(--line);
 border-radius: 6px;
-font-family: "SF Mono", "Menlo", "Consolas", monospace;
-font-size: 7.6pt;
-line-height: 1.45;
+font-family: "PT Mono", "SF Mono", Menlo, Consolas, monospace;
+font-size: 7.9pt;
+line-height: 1.5;
 white-space: pre-wrap;
 word-break: break-word;
 page-break-inside: avoid;
 }
 code {
-font-family: "SF Mono", "Menlo", "Consolas", monospace;
+font-family: "PT Mono", "SF Mono", Menlo, Consolas, monospace;
 font-size: .88em;
 }
 :not(pre) > code {
@@ -176,7 +176,7 @@ Developer / Senior FullStack Developer (Python, Go) / ML</h2>
 <tr>
 <td style="text-align: center;"><strong>7+ лет</strong></td>
 <td style="text-align: center;">Intel · YADRO · Транснефть</td>
-<td style="text-align: center;"><strong>9+ человек</strong></td>
+<td style="text-align: center;"><strong>11 человек</strong></td>
 <td style="text-align: center;"><strong>Senior / Lead</strong></td>
 <td style="text-align: center;"><strong>400 000 ₽/мес</strong></td>
 </tr>
@@ -184,9 +184,9 @@ Developer / Senior FullStack Developer (Python, Go) / ML</h2>
 </table>
 <hr />
 <h2 id="профессиональный-профиль">👩‍💻 Профессиональный профиль</h2>
-<p><strong>Разработчик</strong> с 7+ годами коммерческого опыта, ведущий
-команду. Пишу код каждый день — лидерство не заменило инженерную работу,
-а добавилось к ней.</p>
+<p><strong>Разработчик</strong> с 7+ годами коммерческого опыта, веду
+команду из 11 инженеров. Пишу код каждый день — лидерство не заменило
+инженерную работу, а добавилось к ней.</p>
 <p><strong>Backend</strong> — основная специализация: Python (Senior) и
 Go (Middle+). Микросервисы, gRPC-контракты, асинхронное взаимодействие
 через Kafka и RabbitMQ, оптимизация PostgreSQL под нагрузкой. Проектирую
@@ -263,38 +263,42 @@ MLOps             ●●●○○  версионирование моделей
 <p><strong>Июнь 2025 — настоящее время</strong> · <em>Нефть &amp; Газ /
 Enterprise IT</em></p>
 <ul>
-<li>🏗 <strong>Системный дизайн платформы</strong>: декомпозиция монолита
-на микросервисы, границы сервисов и контракты, выбор синхронного (gRPC)
-и асинхронного (очереди) взаимодействия</li>
-<li>🐍 <strong>Backend на Python 3.12–3.14</strong>: FastAPI 0.115+ и
-asyncio, SQLAlchemy async, Celery — основные бизнес-сервисы</li>
-<li>🐹 <strong>Backend на Go 1.22–1.24</strong>: сервисы интеграций и
-фоновой обработки на Gin, где важны latency и параллелизм — goroutines,
-channels, context с отменой; статические бинари без рантайма</li>
-<li>🚀 <strong>FullStack</strong>: React SPA на TypeScript поверх
-собственных API — формы, таблицы с серверной пагинацией, разграничение
+<li>🏗 <strong>Спроектировала архитектуру платформы</strong>: разделила
+монолит на микросервисы, определила границы и контракты, под каждую
+задачу выбрала синхронное (gRPC) или асинхронное (очереди)
+взаимодействие</li>
+<li>👥 <strong>Веду команду из 11 разработчиков</strong>: декомпозирую
+задачи, ревьюю код, менторю, провожу 1-on-1 и собеседования — не
+переставая писать код сама</li>
+<li>✅ <strong>Подняла покрытие тестами с 20% до 75%+</strong>: ввела
+pytest и интеграционные тесты на testcontainers, quality gate в CI и
+обязательное ревью перед мержем</li>
+<li>📈 <strong>Ускорила критичные API на 40%</strong>: переписала планы
+запросов и добавила покрывающие индексы в PostgreSQL</li>
+<li>🐍 <strong>Написала основные бизнес-сервисы на Python
+3.12–3.14</strong>: FastAPI 0.115+, asyncio, SQLAlchemy async,
+Celery</li>
+<li>🐹 <strong>Вынесла интеграции и фоновую обработку в сервисы на Go
+1.22–1.24</strong> (Gin) — там, где важны latency и параллелизм:
+goroutines, channels, context с отменой, статические бинари без рантайма
+на целевой машине</li>
+<li>🔄 <strong>Развела сервисы через Kafka и RabbitMQ</strong>:
+идемпотентные обработчики, DLQ, политики повторов</li>
+<li>🚀 <strong>Собрала фронтенд поверх собственных API</strong>: React
+SPA на TypeScript — формы, таблицы с серверной пагинацией, разграничение
 прав</li>
-<li>🔄 <strong>Асинхронное взаимодействие</strong>: Kafka и RabbitMQ
-между сервисами, идемпотентность обработчиков, DLQ и повторы</li>
-<li>✅ <strong>Качество как процесс</strong>: pytest + интеграционные
-тесты на testcontainers, quality gate в CI, обязательное ревью —
-покрытие <strong>20% → 75%+</strong></li>
-<li>📈 <strong>Оптимизация PostgreSQL</strong>: планы запросов, индексы
-— время ответа критических API <strong>−40%</strong></li>
-<li>👥 <strong>Руководство командой 9+ разработчиков</strong>:
-декомпозиция задач, code review, менторинг, 1-on-1, найм</li>
-<li>🤖 <strong>Интеграция LLM</strong> (OpenAI / Anthropic Claude API,
-RAG, function calling) во внутренние сервисы</li>
-<li>🧠 <strong>ML и MLOps на данных платформы</strong>: модели
+<li>🛡 <strong>Отвечаю за эксплуатацию</strong>: SLA/SLO на критичные
+сервисы, алерты в Grafana/Prometheus, разбор инцидентов и постмортемы,
+дежурства по графику; Kubernetes 1.30+, GitLab CI</li>
+<li>🧠 <strong>Вывела ML в прод на данных платформы</strong>: модели
 прогнозирования и классификации (PyTorch 2.x, Scikit-learn 1.5+), подбор
-гиперпараметров, версионирование и вывод моделей в прод сервисом
-инференса, контроль качества после выката</li>
-<li>🛡 <strong>SRE-часть работы</strong>: SLA/SLO на критичные сервисы,
-алерты в Grafana/Prometheus, разбор инцидентов и постмортемы, дежурства
-по графику; Kubernetes 1.30+, GitLab CI</li>
-<li>🔗 <strong>Интеграции и доступ</strong>: httpx (async-клиенты,
-таймауты, ретраи, пулы соединений), единый вход через Keycloak 26
-(OIDC/SSO, JWT, роли)</li>
+гиперпараметров, версионирование, сервис инференса, контроль качества
+после каждого выката</li>
+<li>🤖 <strong>Встроила LLM во внутренние сервисы</strong>: OpenAI и
+Anthropic Claude API, RAG, function calling</li>
+<li>🔗 <strong>Закрыла интеграции и единый вход</strong>: httpx (async,
+таймауты, ретраи, пулы соединений), Keycloak 26 (OIDC/SSO, JWT,
+роли)</li>
 </ul>
 <p><code>Python</code> <code>FastAPI</code> <code>httpx</code>
 <code>Keycloak</code> <code>Go</code> <code>gRPC</code>
@@ -307,25 +311,27 @@ Developer</h3>
 <p><strong>Февраль 2023 — Июнь 2025</strong> · <em>Software / Hardware
 R&amp;D</em></p>
 <ul>
-<li>🌐 <strong>Веб-платформа</strong> мониторинга производительности
-HW/SW: Django 4.2–5.1 / DRF 3.14+ + Vue 3 + TypeScript 5</li>
-<li>🔌 <strong>REST API и WebSocket</strong> для real-time метрик; сбор
-и агрегация телеметрии с оборудования на httpx (async, таймауты,
-ретраи)</li>
-<li>🧠 <strong>ML на телеметрии</strong>: обучение и дообучение моделей
-(PyTorch 2.0–2.5, TensorFlow / Keras 2.12+, Scikit-learn 1.3+), подбор
-гиперпараметров, задачи регрессии и классификации, оценка на отложенной
+<li>🌐 <strong>Построила веб-платформу мониторинга производительности
+железа и ПО</strong>: Django 4.2–5.1 / DRF 3.14+, Vue 3 (Composition
+API), TypeScript 5</li>
+<li>🔌 <strong>Отдала метрики в реальном времени</strong>: REST API и
+WebSocket; собирала и агрегировала телеметрию с оборудования на httpx
+(async, таймауты, ретраи)</li>
+<li>🧠 <strong>Обучала и дообучала модели на телеметрии</strong>
+(PyTorch 2.0–2.5, TensorFlow / Keras 2.12+, Scikit-learn 1.3+): подбор
+гиперпараметров, регрессия и классификация, оценка на отложенной
 выборке</li>
-<li>🛠 <strong>Эксплуатация платформы</strong>: сборки и выкаты через
+<li>🛠 <strong>Эксплуатировала платформу</strong>: сборки и выкаты через
 GitLab CI, дашборды и алерты в Grafana / Prometheus, дежурства и разбор
 инцидентов</li>
-<li>🔐 <strong>Единый вход</strong> и разграничение прав через Keycloak
-(OIDC/SSO)</li>
-<li>🐹 <strong>Утилиты сбора метрик на Go 1.20–1.23</strong> — там, где
-нужен один статический бинарь без рантайма на целевой машине</li>
-<li>🧩 <strong>Компонентная библиотека</strong> Vue 3 (Composition API,
-Pinia), OpenAPI/Swagger</li>
-<li>✅ <strong>Тестирование</strong>: pytest на бэкенде, Jest на
+<li>🔐 <strong>Внедрила единый вход</strong> и разграничение прав через
+Keycloak (OIDC/SSO)</li>
+<li>🐹 <strong>Написала утилиты сбора метрик на Go 1.20–1.23</strong> —
+там, где нужен один статический бинарь без рантайма на целевой
+машине</li>
+<li>🧩 <strong>Поддерживала компонентную библиотеку</strong> Vue 3
+(Pinia) и контракты OpenAPI/Swagger</li>
+<li>✅ <strong>Покрыла стек тестами</strong>: pytest на бэкенде, Jest на
 фронтенде; code review, Scrum</li>
 </ul>
 <p><code>Python</code> <code>Django 4–5</code> <code>DRF</code>
@@ -339,21 +345,21 @@ Intel Corporation — AI Systems Engineer / FullStack Developer</h3>
 <p><strong>Февраль 2018 — Февраль 2022</strong> · <em>Semiconductor / AI
 &amp; ML</em></p>
 <ul>
-<li>🧠 <strong>Глубокое обучение и ML</strong>: обучение и дообучение
-моделей на TensorFlow 1.15–2.8 / Keras и PyTorch 1.x, классические
-алгоритмы на Scikit-learn 0.20–1.0</li>
-<li>🎛 <strong>Полный цикл модели</strong>: подготовка и разметка
+<li>🧠 <strong>Обучала и дообучала модели глубокого обучения</strong> на
+TensorFlow 1.15–2.8 / Keras и PyTorch 1.x, классические алгоритмы — на
+Scikit-learn 0.20–1.0</li>
+<li>🎛 <strong>Вела модель полного цикла</strong>: подготовка и разметка
 датасетов, выбор архитектуры, подбор гиперпараметров, регуляризация,
 метрики регрессии и классификации, инференс в проде</li>
-<li>🔬 <strong>Веб-инструменты</strong> анализа производительности ПО и
-HW: Python 3.6–3.9 (Django 2.0–4.0) + React 16 + D3.js</li>
-<li>🗃 <strong>Backend</strong>: REST API, PostgreSQL 9.6–13 + MongoDB
-4.x; дашборды на больших выборках</li>
-<li>♻️ <strong>Пайплайны обучения и переобучения</strong>: подготовка
-данных, регулярный ретрейн, выкат весов в сервисы — MLOps до того, как
-это так назвали</li>
-<li>🧪 <strong>QA-автоматизация</strong> (pytest, unittest); мониторинг
-Grafana / Prometheus</li>
+<li>♻️ <strong>Автоматизировала обучение и переобучение</strong>:
+подготовка данных, регулярный ретрейн, выкат весов в сервисы — MLOps до
+того, как это так назвали</li>
+<li>🔬 <strong>Построила веб-инструменты анализа производительности ПО и
+железа</strong>: Python 3.6–3.9 (Django 2.0–4.0), React 16, D3.js</li>
+<li>🗃 <strong>Отдала данные через REST API</strong>: PostgreSQL 9.6–13 и
+MongoDB 4.x, дашборды на больших выборках</li>
+<li>🧪 <strong>Автоматизировала QA</strong> (pytest, unittest) и
+мониторинг в Grafana / Prometheus</li>
 </ul>
 <p><code>Python</code> <code>Django 2–4</code> <code>React</code>
 <code>TypeScript</code> <code>D3.js</code> <code>PostgreSQL</code>

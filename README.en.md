@@ -19,7 +19,7 @@
 
 | 🏆 Experience | 🏢 Companies | 👥 Team led | 💎 Level | 🌍 Availability |
 |:---:|:---:|:---:|:---:|:---:|
-| **7+ years** | Intel · YADRO · Transneft | **9 engineers** | **Senior / Lead** | **Remote · UTC+3** |
+| **7+ years** | Intel · YADRO · Transneft | **11 engineers** | **Senior / Lead** | **Remote · UTC+3** |
 
 **English C1** · overlaps 2–4 hours with CET/EET working hours · open to relocation
 
@@ -27,7 +27,7 @@
 
 ## 👩‍💻 Profile
 
-**Engineer** with 7+ years of commercial experience, currently leading a team of nine. I still write code every day — leadership was added to the engineering work, not substituted for it.
+**Engineer** with 7+ years of commercial experience, currently leading a team of eleven. I still write code every day — leadership was added to the engineering work, not substituted for it.
 
 **Backend** is my core specialisation: Python (advanced) and Go (working knowledge, production services since 2020). Microservices, gRPC contracts, asynchronous messaging over Kafka and RabbitMQ, PostgreSQL tuning under load. I design whole systems: service boundaries, data model, fault tolerance, deployment, monitoring.
 
@@ -139,7 +139,7 @@ MLOps             ●●●○○  model versioning · scheduled retraining · w
 - 🔄 **Introduced asynchronous messaging** over Kafka and RabbitMQ: idempotent handlers, dead-letter queues, retry policies
 - ✅ **Made quality a process**: pytest plus integration tests on testcontainers, a CI quality gate and mandatory review — raised coverage from **20% to 75%+**
 - 📈 **Cut response time of business-critical APIs by 40%** by rewriting query plans and adding covering indexes in PostgreSQL
-- 👥 **Led a team of 9+ engineers**: task decomposition, code review, mentoring, 1-on-1s, hiring
+- 👥 **Led a team of 11 engineers**: task decomposition, code review, mentoring, 1-on-1s, hiring
 - 🤖 **Integrated LLMs** (OpenAI / Anthropic Claude API, RAG, function calling) into internal services
 - 🧠 **Owned ML and MLOps on platform data**: forecasting and classification models (PyTorch 2.x, scikit-learn 1.5+), hyperparameter search, model versioning and serving in production, quality monitoring after each rollout
 - 🛡 **Ran the SRE side**: SLA/SLO for critical services, Grafana/Prometheus alerting, incident reviews and postmortems, scheduled on-call; Kubernetes 1.30+, GitLab CI

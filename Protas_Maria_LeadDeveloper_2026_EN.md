@@ -8,7 +8,7 @@
 
 ## Summary
 
-Engineer with 7+ years of commercial experience, currently leading a team of nine and still writing production code daily. Core specialisation is backend — Python (advanced) and Go (working knowledge): microservices, gRPC contracts, Kafka and RabbitMQ messaging, PostgreSQL under load. Comfortable owning a system end to end: service boundaries, data model, fault tolerance, deployment and monitoring. Second track is machine learning — trained and served models in production at Intel and YADRO, now including LLM integrations.
+Engineer with 7+ years of commercial experience, currently leading a team of eleven and still writing production code daily. Core specialisation is backend — Python (advanced) and Go (working knowledge): microservices, gRPC contracts, Kafka and RabbitMQ messaging, PostgreSQL under load. Comfortable owning a system end to end: service boundaries, data model, fault tolerance, deployment and monitoring. Second track is machine learning — trained and served models in production at Intel and YADRO, now including LLM integrations.
 
 ## Core skills
 
@@ -26,7 +26,7 @@ Engineer with 7+ years of commercial experience, currently leading a team of nin
 *Jun 2025 — Present · IT arm of Transneft, the national oil & gas pipeline operator*
 
 - Designed the platform architecture: decomposed a monolith into services, defined boundaries and contracts, and chose synchronous (gRPC) or asynchronous (Kafka, RabbitMQ) interaction per case
-- Led a team of 9 engineers — task decomposition, code review, mentoring, 1-on-1s and hiring — while remaining a hands-on contributor
+- Led a team of 11 engineers — task decomposition, code review, mentoring, 1-on-1s and hiring — while remaining a hands-on contributor
 - Raised test coverage from 20% to 75%+ by introducing pytest with testcontainers-based integration tests, a CI quality gate and mandatory review
 - Cut response time of business-critical APIs by 40% through PostgreSQL query-plan rewrites and covering indexes
 - Built core business services in Python 3.12–3.14 (FastAPI, asyncio, SQLAlchemy async, Celery) and latency-sensitive integration services in Go 1.22–1.24
