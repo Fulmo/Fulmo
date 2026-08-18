@@ -1,7 +1,7 @@
 <img src="avatar.png" alt="Maria Protas" align="right" width="150">
 
 <!-- lang-switch -->
-[![Русский](https://img.shields.io/badge/%F0%9F%87%B7%F0%9F%87%BA_Русский-8a8580?style=flat)](README.md) [![English](https://img.shields.io/badge/%F0%9F%87%AC%F0%9F%87%A7_English-a8481c?style=flat)](README.en.md) [![Website](https://img.shields.io/badge/%F0%9F%8C%90_Website-2f4858?style=flat)](https://fulmo.github.io/)
+[![Русский](https://img.shields.io/badge/%F0%9F%87%B7%F0%9F%87%BA_Русский-8a8580?style=flat)](README.md) [![English](https://img.shields.io/badge/%F0%9F%87%AC%F0%9F%87%A7_English-a8481c?style=flat)](README.en.md) [![Website](https://img.shields.io/badge/%F0%9F%8C%90_Website-2f4858?style=flat)](https://fulmo.github.io/Fulmo/)
 
 # Maria Protas
 
