@@ -24,7 +24,7 @@
 
 ## 👩‍💻 Profile
 
-**Engineer** with 7+ years of commercial experience, currently leading a team of eleven. I still write code every day — leadership was added to the engineering work, not substituted for it.
+**Engineer** with 7+ years of commercial experience, currently leading a team of 11 engineers. I still write code every day — leadership was added to the engineering work, not substituted for it.
 
 **Backend** is my core specialisation: Python (advanced) and Go (working knowledge, production services since 2020). Microservices, gRPC contracts, asynchronous messaging over Kafka and RabbitMQ, PostgreSQL tuning under load. I design whole systems: service boundaries, data model, fault tolerance, deployment, monitoring.
 

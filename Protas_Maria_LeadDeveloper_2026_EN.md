@@ -8,7 +8,7 @@
 
 ## Summary
 
-Engineer with 7+ years of commercial experience, currently leading a team of eleven and still writing production code daily. Core specialisation is backend — Python (advanced) and Go (working knowledge): microservices, gRPC contracts, Kafka and RabbitMQ messaging, PostgreSQL under load. Comfortable owning a system end to end: service boundaries, data model, fault tolerance, deployment and monitoring. Second track is machine learning — trained and served models in production at Intel and YADRO, now including LLM integrations.
+Engineer with 7+ years of commercial experience, currently leading a team of 11 engineers and still writing production code daily. Core specialisation is backend — Python (advanced) and Go (working knowledge): microservices, gRPC contracts, Kafka and RabbitMQ messaging, PostgreSQL under load. Comfortable owning a system end to end: service boundaries, data model, fault tolerance, deployment and monitoring. Second track is machine learning — trained and served models in production at Intel and YADRO, now including LLM integrations.
 
 ## Core skills
 
