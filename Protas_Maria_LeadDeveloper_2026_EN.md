@@ -50,7 +50,7 @@ Engineer with 7+ years of commercial experience, currently leading a team of 11 
 
 - Trained and fine-tuned deep learning models (TensorFlow / Keras, PyTorch) and classical models (scikit-learn), owning the full lifecycle from dataset preparation to production inference
 - Automated training and retraining pipelines with scheduled retraining and weight rollout into services — MLOps before the term existed
-- Built internal web tools for software and hardware performance analysis: Python (Django), React 16 and D3.js over PostgreSQL and MongoDB
+- Built internal web tools and inference services for software and hardware performance analysis: Python (Django, FastAPI from 2019), React 16 and D3.js over PostgreSQL and MongoDB
 - Automated QA with pytest and unittest; set up Grafana and Prometheus monitoring
 
 ## Selected projects

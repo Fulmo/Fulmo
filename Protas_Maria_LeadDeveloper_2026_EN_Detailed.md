@@ -172,7 +172,8 @@ MLOps             ●●●○○  model versioning · scheduled retraining · w
 
 - 🧠 **Trained and fine-tuned deep learning models** on TensorFlow 1.15–2.8 / Keras and PyTorch 1.x, plus classical algorithms on scikit-learn 0.20–1.0
 - 🎛 **Owned the full model lifecycle**: dataset preparation and labelling, architecture selection, hyperparameter search, regularisation, regression and classification metrics, inference in production
-- 🔬 **Built web tools** for software and hardware performance analysis: Python 3.6–3.9 (Django 2.0–4.0) with React 16 and D3.js
+- ⚡ **Built inference services and internal APIs on FastAPI** (from 2019): async prediction endpoints, Pydantic request validation, wired into the training pipelines
+- 🔬 **Built web tools** for software and hardware performance analysis: Python 3.6–3.9 (Django 2.0–4.0, FastAPI 0.4x–0.7x) with React 16 and D3.js
 - 🗃 **Backend work**: REST APIs, PostgreSQL 9.6–13 and MongoDB 4.x; dashboards over large result sets
 - ♻️ **Automated training and retraining pipelines**: data preparation, scheduled retraining, weight rollout into services — MLOps before it was called that
 - 🧪 **Automated testing of the analysis tooling** (pytest, unittest): regression suites over real datasets, checks that model metrics stayed stable between runs; monitoring in Grafana / Prometheus
