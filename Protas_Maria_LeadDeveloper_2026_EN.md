@@ -2,7 +2,7 @@
 
 ## Lead Developer · Senior Full-Stack Engineer (Python, Go) · SDET
 
-<i@mprotas.ru> · [t.me/vkusniypirogok](https://t.me/vkusniypirogok) · [github.com/Fulmo](https://github.com/Fulmo) · Nizhny Novgorod, Russia (UTC+3, 2–4h overlap with CET/EET) · English C1 · Remote or relocation
+<i@mprotas.ru> · [t.me/vkusniypirogok](https://t.me/vkusniypirogok) · [github.com/Fulmo](https://github.com/Fulmo) · [linkedin.com/in/maria-protas](https://www.linkedin.com/in/maria-protas-9a6168199/) · Nizhny Novgorod, Russia (UTC+3, 2–4h overlap with CET/EET) · English C1 · Remote or relocation
 
 ---
 

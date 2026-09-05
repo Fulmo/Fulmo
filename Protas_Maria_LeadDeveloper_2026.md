@@ -6,6 +6,7 @@
 
 [![Telegram](https://img.shields.io/badge/Telegram-@vkusniypirogok-2CA5E0?style=flat&logo=telegram)](https://t.me/vkusniypirogok)
 [![GitHub](https://img.shields.io/badge/GitHub-Fulmo-181717?style=flat&logo=github)](https://github.com/Fulmo)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Мария%20Протас-0A66C2?style=flat&logo=linkedin)](https://www.linkedin.com/in/maria-protas-9a6168199/)
 [![Email](https://img.shields.io/badge/Email-i@mprotas.ru-D14836?style=flat&logo=gmail)](mailto:i@mprotas.ru)
 [![Location](https://img.shields.io/badge/Location-Нижний%20Новгород-4285F4?style=flat&logo=google-maps)](https://maps.google.com/?q=Нижний+Новгород)
 [![Remote](https://img.shields.io/badge/Формат-Remote%20%2F%20Hybrid-34D399?style=flat)](/)
