@@ -179,7 +179,7 @@ MLOps             ●●●○○  model versioning · scheduled retraining · w
 - ♻️ **Automated training and retraining pipelines**: data preparation, scheduled retraining, weight rollout into services — MLOps before it was called that
 - 🧪 **Automated testing of the analysis tooling** (pytest, unittest): regression suites over real datasets, checks that model metrics stayed stable between runs; monitoring in Grafana / Prometheus
 
-`Python` `Django 2–4` `React` `TypeScript` `D3.js` `PostgreSQL` `MongoDB` `Docker` `Grafana` `TensorFlow` `Keras` `PyTorch` `scikit-learn` `Deep Learning`
+`Python` `Django 2–4` `FastAPI` `React` `TypeScript` `D3.js` `PostgreSQL` `MongoDB` `Docker` `Grafana` `TensorFlow` `Keras` `PyTorch` `scikit-learn` `Deep Learning`
 
 ---
 
