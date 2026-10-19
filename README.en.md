@@ -294,3 +294,11 @@ Side projects running in production — there I own the whole system: data model
 ---
 
 *Updated: August 2026*
+
+## Project documentation
+
+- Development rules: AGENTS.md and CLAUDE.md
+- Review policy: REVIEW.md
+- Local workflow and publication: README-LOCAL.md
+- Project facts without secrets: MEMORY.md
+- Change history: CHANGELOG.md
